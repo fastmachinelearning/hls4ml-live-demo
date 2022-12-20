@@ -1,0 +1,1539 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:79:2
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: firmware/nnet_utils/nnet_dense_latency.h:76:9
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:66:74
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:66:78
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:74:74
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:74:78
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:82:77
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:82:81
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:84:75
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:84:80
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:35:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:36:5
+WARNING: [HLS 200-471] Dataflow form checks found 13 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject_axi.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject_axi.cpp:23:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject_axi.cpp:35:5
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file firmware/myproject_axi.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 1057.129 ; gain = 527.219 ; free physical = 72837 ; free virtual = 149089
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 1057.129 ; gain = 527.219 ; free physical = 72837 ; free virtual = 149089
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-489] Unrolling loop 'MultLoop' (firmware/nnet_utils/nnet_dense_resource.h:158) in function 'void nnet::dense_resource_rf_gt_nin_rem0<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config12>(FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'MultLoop' (firmware/nnet_utils/nnet_dense_resource.h:394) in function 'void nnet::dense_relu_resource_rf_gt_nin_rem0<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, config10_mult>(FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'MultLoop' (firmware/nnet_utils/nnet_dense_resource.h:394) in function 'void nnet::dense_relu_resource_rf_gt_nin_rem0<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, config7_mult>(FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'MultLoop' (firmware/nnet_utils/nnet_dense_resource.h:394) in function 'void nnet::dense_relu_resource_rf_gt_nin_rem0<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, config4_mult>(FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>::operator[].1' into 'myproject_axi' (firmware/myproject_axi.cpp:27).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>::operator[].1' into 'nnet::fill_data<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config14>' (firmware/nnet_utils/nnet_padding_stream.h:26).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>::operator[].1' into 'nnet::fill_data<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config14>' (firmware/nnet_utils/nnet_padding_stream.h:26).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_data<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config14>' into 'nnet::zeropad2d_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config14>' (firmware/nnet_utils/nnet_padding_stream.h:66).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>::operator[]' into 'nnet::shift_line_buffer<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config4>' (firmware/nnet_utils/nnet_conv_stream.h:224).
+INFO: [XFORM 203-603] Inlining function 'nnet::kernel_shift_2d<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config4>' into 'nnet::shift_line_buffer<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config4>' (firmware/nnet_utils/nnet_conv_stream.h:235).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::dense_relu_resource_rf_gt_nin_rem0<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, config4_mult>' (firmware/nnet_utils/nnet_dense_resource.h:396).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_relu_resource_rf_gt_nin_rem0<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, config4_mult>' into 'nnet::dense_resource<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, config4_mult>' (firmware/nnet_utils/nnet_dense_resource.h:518).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>::operator[]' into 'nnet::compute_output_buffer_2d<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>' (firmware/nnet_utils/nnet_conv_stream.h:285).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>::operator[]' into 'nnet::fill_data<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' (firmware/nnet_utils/nnet_padding_stream.h:26).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>::operator[]' into 'nnet::fill_data<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' (firmware/nnet_utils/nnet_padding_stream.h:26).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>::operator[]' into 'nnet::fill_zero<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' (firmware/nnet_utils/nnet_padding_stream.h:14).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>::operator[]' into 'nnet::compute_output_buffer_2d<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' (firmware/nnet_utils/nnet_conv_stream.h:285).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>::operator[]' into 'nnet::fill_data<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' (firmware/nnet_utils/nnet_padding_stream.h:26).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>::operator[]' into 'nnet::fill_data<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' (firmware/nnet_utils/nnet_padding_stream.h:26).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>::operator[]' into 'nnet::fill_zero<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' (firmware/nnet_utils/nnet_padding_stream.h:14).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>::operator[]' into 'nnet::compute_output_buffer_2d<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' (firmware/nnet_utils/nnet_conv_stream.h:285).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>::operator[]' into 'nnet::dense<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 10u>, config12>' (firmware/nnet_utils/nnet_dense_stream.h:48).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_resource<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, config4_mult>' into 'nnet::compute_output_buffer_2d<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>' (firmware/nnet_utils/nnet_conv_stream.h:279).
+INFO: [XFORM 203-603] Inlining function 'nnet::compute_output_buffer_2d<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>' into 'nnet::conv_2d_buffer_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>' (firmware/nnet_utils/nnet_conv2d_stream.h:85).
+INFO: [XFORM 203-603] Inlining function 'nnet::conv_2d_buffer_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>' into 'nnet::conv_2d_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>' (firmware/nnet_utils/nnet_conv2d_stream.h:103).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' into 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' (firmware/nnet_utils/nnet_padding_stream.h:75).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' into 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' (firmware/nnet_utils/nnet_padding_stream.h:69).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' into 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' (firmware/nnet_utils/nnet_padding_stream.h:63).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' into 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' (firmware/nnet_utils/nnet_padding_stream.h:57).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_data<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' into 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' (firmware/nnet_utils/nnet_padding_stream.h:66).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>::operator[].1' into 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' (firmware/nnet_utils/nnet_conv_stream.h:224).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>::operator[].1' into 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' (firmware/nnet_utils/nnet_conv_stream.h:224).
+INFO: [XFORM 203-603] Inlining function 'nnet::kernel_shift_2d<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' into 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' (firmware/nnet_utils/nnet_conv_stream.h:235).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::dense_relu_resource_rf_gt_nin_rem0<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, config7_mult>' (firmware/nnet_utils/nnet_dense_resource.h:396).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<14, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::dense_relu_resource_rf_gt_nin_rem0<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, config10_mult>' (firmware/nnet_utils/nnet_dense_resource.h:396).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_relu_resource_rf_gt_nin_rem0<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, config7_mult>' into 'nnet::dense_resource<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, config7_mult>' (firmware/nnet_utils/nnet_dense_resource.h:518).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_resource<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, config7_mult>' into 'nnet::compute_output_buffer_2d<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' (firmware/nnet_utils/nnet_conv_stream.h:279).
+INFO: [XFORM 203-603] Inlining function 'nnet::compute_output_buffer_2d<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' into 'nnet::conv_2d_buffer_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' (firmware/nnet_utils/nnet_conv2d_stream.h:85).
+INFO: [XFORM 203-603] Inlining function 'nnet::conv_2d_buffer_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' into 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' (firmware/nnet_utils/nnet_conv2d_stream.h:103).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' into 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' (firmware/nnet_utils/nnet_padding_stream.h:75).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' into 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' (firmware/nnet_utils/nnet_padding_stream.h:69).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' into 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' (firmware/nnet_utils/nnet_padding_stream.h:63).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_zero<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' into 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' (firmware/nnet_utils/nnet_padding_stream.h:57).
+INFO: [XFORM 203-603] Inlining function 'nnet::fill_data<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' into 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' (firmware/nnet_utils/nnet_padding_stream.h:66).
+INFO: [XFORM 203-603] Inlining function 'nnet::kernel_shift_2d<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' into 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' (firmware/nnet_utils/nnet_conv_stream.h:235).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_relu_resource_rf_gt_nin_rem0<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, config10_mult>' into 'nnet::dense_resource<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, config10_mult>' (firmware/nnet_utils/nnet_dense_resource.h:518).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_resource<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, config10_mult>' into 'nnet::compute_output_buffer_2d<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' (firmware/nnet_utils/nnet_conv_stream.h:279).
+INFO: [XFORM 203-603] Inlining function 'nnet::compute_output_buffer_2d<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' into 'nnet::conv_2d_buffer_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' (firmware/nnet_utils/nnet_conv2d_stream.h:85).
+INFO: [XFORM 203-603] Inlining function 'nnet::conv_2d_buffer_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' into 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' (firmware/nnet_utils/nnet_conv2d_stream.h:103).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<12, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::dense_resource_rf_gt_nin_rem0<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config12>' (firmware/nnet_utils/nnet_dense_resource.h:160).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_resource_rf_gt_nin_rem0<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config12>' into 'nnet::dense_resource<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config12>' (firmware/nnet_utils/nnet_dense_resource.h:526).
+INFO: [XFORM 203-603] Inlining function 'nnet::dense_resource<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config12>' into 'nnet::dense_wrapper<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config12>' (firmware/nnet_utils/nnet_dense_stream.h:24).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 10u>::operator[]' into 'myproject_axi' (firmware/myproject_axi.cpp:39).
+INFO: [XFORM 203-603] Inlining function 'nnet::array<ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 10u>::operator[]' into 'nnet::dense<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 10u>, config12>' (firmware/nnet_utils/nnet_dense_stream.h:62).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:33 ; elapsed = 00:01:36 . Memory (MB): peak = 3361.129 ; gain = 2831.219 ; free physical = 71318 ; free virtual = 147578
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<9, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config4_mult>' into 'nnet::conv_2d_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>' (firmware/nnet_utils/nnet_dense_resource.h:414->firmware/nnet_utils/nnet_dense_resource.h:518->firmware/nnet_utils/nnet_conv_stream.h:279->firmware/nnet_utils/nnet_conv2d_stream.h:85->firmware/nnet_utils/nnet_conv2d_stream.h:103) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<9, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config7_mult>' into 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' (firmware/nnet_utils/nnet_dense_resource.h:414->firmware/nnet_utils/nnet_dense_resource.h:518->firmware/nnet_utils/nnet_conv_stream.h:279->firmware/nnet_utils/nnet_conv2d_stream.h:85->firmware/nnet_utils/nnet_conv2d_stream.h:103) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<9, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10_mult>' into 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' (firmware/nnet_utils/nnet_dense_resource.h:414->firmware/nnet_utils/nnet_dense_resource.h:518->firmware/nnet_utils/nnet_conv_stream.h:279->firmware/nnet_utils/nnet_conv2d_stream.h:85->firmware/nnet_utils/nnet_conv2d_stream.h:103) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config12>' into 'nnet::dense_wrapper<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config12>' (firmware/nnet_utils/nnet_dense_resource.h:178->firmware/nnet_utils/nnet_dense_resource.h:526->firmware/nnet_utils/nnet_dense_stream.h:24) automatically.
+WARNING: [SYNCHK 200-23] firmware/myproject_axi.cpp:39: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:40 ; elapsed = 00:01:43 . Memory (MB): peak = 3362.355 ; gain = 2832.445 ; free physical = 71324 ; free virtual = 147586
+WARNING: [XFORM 203-803] Cannot specify interface mode 'axis' on argument 'data.V.data.V' . This interface directive will be discarded. Please apply it on an argument of top module.
+WARNING: [XFORM 203-803] Cannot specify interface mode 'axis' on argument 'res_stream.V.data.V' . This interface directive will be discarded. Please apply it on an argument of top module.
+WARNING: [XFORM 203-803] Cannot specify interface mode 'axis' (firmware/myproject.cpp:32:1) on argument 'input_1.V.data.V' (firmware/myproject.cpp:25). This interface directive will be discarded. Please apply it on an argument of top module.
+WARNING: [XFORM 203-803] Cannot specify interface mode 'axis' (firmware/myproject.cpp:32:94) on argument 'layer12_out.V.data.V' (firmware/myproject.cpp:26). This interface directive will be discarded. Please apply it on an argument of top module.
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out.data' (firmware/myproject_axi.cpp:5).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in.data' (firmware/myproject_axi.cpp:4).
+INFO: [XFORM 203-1101] Packing variable 'res_pack.data.V' (firmware/nnet_utils/nnet_dense_stream.h:58) into a 80-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'res_pack.data.V' (firmware/nnet_utils/nnet_conv_stream.h:265) into a 256-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'res_pack.data.V' (firmware/nnet_utils/nnet_conv_stream.h:265) into a 256-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'res_pack.data.V' (firmware/nnet_utils/nnet_conv_stream.h:265) into a 256-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'ctype.data.V' (firmware/myproject_axi.cpp:24) into a 24-bit variable.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'DataPrepare' (firmware/nnet_utils/nnet_dense_stream.h:41) in function 'nnet::dense<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 10u>, config12>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' (firmware/nnet_utils/nnet_conv_stream.h:188:82).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'KernelShiftWidth' (firmware/nnet_utils/nnet_conv_stream.h:188) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' (firmware/nnet_utils/nnet_conv_stream.h:188:82).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'KernelShiftWidth' (firmware/nnet_utils/nnet_conv_stream.h:188) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::shift_line_buffer<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config4>' (firmware/nnet_utils/nnet_conv_stream.h:188:82).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'KernelShiftWidth' (firmware/nnet_utils/nnet_conv_stream.h:188) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (firmware/nnet_utils/nnet_padding_stream.h:24) in function 'nnet::zeropad2d_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config14>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_padding_stream.h:12) in function 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_padding_stream.h:12) in function 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.2.1' (firmware/nnet_utils/nnet_padding_stream.h:24) in function 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.3' (firmware/nnet_utils/nnet_padding_stream.h:12) in function 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (firmware/nnet_utils/nnet_padding_stream.h:12) in function 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (firmware/nnet_utils/nnet_padding_stream.h:12) in function 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (firmware/nnet_utils/nnet_padding_stream.h:12) in function 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.2.1' (firmware/nnet_utils/nnet_padding_stream.h:24) in function 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.3' (firmware/nnet_utils/nnet_padding_stream.h:12) in function 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (firmware/nnet_utils/nnet_padding_stream.h:12) in function 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'DataPack' (firmware/nnet_utils/nnet_dense_stream.h:46) in function 'nnet::dense<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 10u>, config12>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'ResPack' (firmware/nnet_utils/nnet_dense_stream.h:60) in function 'nnet::dense<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 10u>, config12>' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'InitAccum' (firmware/nnet_utils/nnet_dense_resource.h:366) in function 'nnet::conv_2d_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Result' (firmware/nnet_utils/nnet_dense_resource.h:412) in function 'nnet::conv_2d_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'CastLoop' (firmware/nnet_utils/nnet_conv_stream.h:283) in function 'nnet::conv_2d_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'InitAccum' (firmware/nnet_utils/nnet_dense_resource.h:366) in function 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Result' (firmware/nnet_utils/nnet_dense_resource.h:412) in function 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'CastLoop' (firmware/nnet_utils/nnet_conv_stream.h:283) in function 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'InitAccum' (firmware/nnet_utils/nnet_dense_resource.h:366) in function 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Result' (firmware/nnet_utils/nnet_dense_resource.h:412) in function 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'CastLoop' (firmware/nnet_utils/nnet_conv_stream.h:283) in function 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'InitAccum' (firmware/nnet_utils/nnet_dense_resource.h:130) in function 'nnet::dense_wrapper<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config12>' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Result' (firmware/nnet_utils/nnet_dense_resource.h:176) in function 'nnet::dense_wrapper<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config12>' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'UpdateBuffer' (firmware/nnet_utils/nnet_conv_stream.h:220) in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'LineBufferDataIn' (firmware/nnet_utils/nnet_conv_stream.h:227) in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'LineBufferShift' (firmware/nnet_utils/nnet_conv_stream.h:229) in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'KernelShiftWidth' (firmware/nnet_utils/nnet_conv_stream.h:188) in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'KernelShiftHeight' (firmware/nnet_utils/nnet_conv_stream.h:190) in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'KernelShiftChannel' (firmware/nnet_utils/nnet_conv_stream.h:191) in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'KernelPushHeight' (firmware/nnet_utils/nnet_conv_stream.h:200) in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'KernelPushChannel' (firmware/nnet_utils/nnet_conv_stream.h:202) in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'UpdateBuffer' (firmware/nnet_utils/nnet_conv_stream.h:220) in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'LineBufferDataIn' (firmware/nnet_utils/nnet_conv_stream.h:227) in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'LineBufferShift' (firmware/nnet_utils/nnet_conv_stream.h:229) in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'KernelShiftWidth' (firmware/nnet_utils/nnet_conv_stream.h:188) in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'KernelShiftHeight' (firmware/nnet_utils/nnet_conv_stream.h:190) in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'KernelShiftChannel' (firmware/nnet_utils/nnet_conv_stream.h:191) in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'KernelPushHeight' (firmware/nnet_utils/nnet_conv_stream.h:200) in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'KernelPushChannel' (firmware/nnet_utils/nnet_conv_stream.h:202) in function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'UpdateBuffer' (firmware/nnet_utils/nnet_conv_stream.h:220) in function 'nnet::shift_line_buffer<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config4>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'LineBufferDataIn' (firmware/nnet_utils/nnet_conv_stream.h:227) in function 'nnet::shift_line_buffer<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config4>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'LineBufferShift' (firmware/nnet_utils/nnet_conv_stream.h:229) in function 'nnet::shift_line_buffer<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config4>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'KernelShiftWidth' (firmware/nnet_utils/nnet_conv_stream.h:188) in function 'nnet::shift_line_buffer<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config4>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'KernelShiftHeight' (firmware/nnet_utils/nnet_conv_stream.h:190) in function 'nnet::shift_line_buffer<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config4>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'KernelShiftChannel' (firmware/nnet_utils/nnet_conv_stream.h:191) in function 'nnet::shift_line_buffer<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config4>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'KernelPushHeight' (firmware/nnet_utils/nnet_conv_stream.h:200) in function 'nnet::shift_line_buffer<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config4>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'KernelPushChannel' (firmware/nnet_utils/nnet_conv_stream.h:202) in function 'nnet::shift_line_buffer<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config4>' completely with a factor of 3.
+INFO: [XFORM 203-102] Partitioning array 'res_part.data.V' (firmware/nnet_utils/nnet_padding_stream.h:23) automatically.
+INFO: [XFORM 203-102] Partitioning array 'res_part.data.V.10' (firmware/nnet_utils/nnet_padding_stream.h:23) automatically.
+INFO: [XFORM 203-102] Partitioning array 'res_part.data.V.4' (firmware/nnet_utils/nnet_padding_stream.h:23) automatically.
+WARNING: [XFORM 203-135] Cannot reshape array 'w2.V' : incorrect reshape factor 1.
+WARNING: [XFORM 203-135] Cannot reshape array 'w5.V' : incorrect reshape factor 1.
+WARNING: [XFORM 203-135] Cannot reshape array 'w8.V' : incorrect reshape factor 1.
+WARNING: [XFORM 203-135] Cannot reshape array 'w12.V' : incorrect reshape factor 1.
+WARNING: [XFORM 203-135] Cannot reshape array 'w2.V' : incorrect reshape factor 1.
+WARNING: [XFORM 203-135] Cannot reshape array 'w5.V' : incorrect reshape factor 1.
+WARNING: [XFORM 203-135] Cannot reshape array 'w8.V' : incorrect reshape factor 1.
+WARNING: [XFORM 203-135] Cannot reshape array 'w12.V' : incorrect reshape factor 1.
+INFO: [XFORM 203-102] Automatically partitioning shift register array 'line_buffer.Array.V.2' .
+INFO: [XFORM 203-102] Automatically partitioning shift register array 'line_buffer.Array.V.1' .
+INFO: [XFORM 203-102] Automatically partitioning shift register array 'line_buffer.Array.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'in_local.V.data.V' (firmware/myproject_axi.cpp:17) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer14_out.V.data.V' (firmware/myproject.cpp:60) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer7_out.V.data.V' (firmware/myproject.cpp:72) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer16_out.V.data.V' (firmware/myproject.cpp:76) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer4_out.V.data.V' (firmware/myproject.cpp:64) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer15_out.V.data.V' (firmware/myproject.cpp:68) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'layer10_out.V.data.V' (firmware/myproject.cpp:80) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'out_local.V.data.V' (firmware/myproject_axi.cpp:18) .
+INFO: [XFORM 203-101] Partitioning array 'tmp.data.V.4' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmp.data.V.9' in dimension 1 completely.
+WARNING: [XFORM 203-104] Completely partitioning array 'data.V' (firmware/nnet_utils/nnet_dense_stream.h:35) accessed through non-constant indices on dimension 1 (firmware/nnet_utils/nnet_dense_stream.h:48:39), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'data.V' (firmware/nnet_utils/nnet_dense_stream.h:35) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'res'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmp.data.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'line_buffer.Array.V.2' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'kernel_data.V.2'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'res_out.i.i'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b2.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_dense_resource.h:362) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'line_buffer.Array.V.1' in dimension 1 completely.
+WARNING: [XFORM 203-104] Completely partitioning array 'kernel_data.V.1'  accessed through non-constant indices on dimension 1 (firmware/nnet_utils/nnet_dense_resource.h:396:20), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'kernel_data.V.1'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'res_out.i.i'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b5.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_dense_resource.h:362) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'line_buffer.Array.V' in dimension 1 completely.
+WARNING: [XFORM 203-104] Completely partitioning array 'kernel_data.V'  accessed through non-constant indices on dimension 1 (firmware/nnet_utils/nnet_dense_resource.h:396:20), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'kernel_data.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'res_out.i.i'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b8.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_dense_resource.h:362) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmp.data.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b12.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_dense_resource.h:126) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'shift_buffer.V' (firmware/nnet_utils/nnet_conv_stream.h:217) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'shift_buffer.V' (firmware/nnet_utils/nnet_conv_stream.h:217) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'shift_buffer.V' (firmware/nnet_utils/nnet_conv_stream.h:217) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'in_local.V.data.V' (firmware/myproject_axi.cpp:17) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer14_out.V.data.V' (firmware/myproject.cpp:60) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer7_out.V.data.V' (firmware/myproject.cpp:72) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer16_out.V.data.V' (firmware/myproject.cpp:76) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer4_out.V.data.V' (firmware/myproject.cpp:64) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer15_out.V.data.V' (firmware/myproject.cpp:68) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer10_out.V.data.V' (firmware/myproject.cpp:80) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'out_local.V.data.V' (firmware/myproject_axi.cpp:18) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'line_buffer.Array.V.2'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'line_buffer.Array.V.1'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'line_buffer.Array.V'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'shift_buffer.V' (firmware/nnet_utils/nnet_conv_stream.h:217) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'shift_buffer.V' (firmware/nnet_utils/nnet_conv_stream.h:217) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'shift_buffer.V' (firmware/nnet_utils/nnet_conv_stream.h:217) in dimension 2 completely.
+WARNING: [XFORM 203-104] Completely partitioning array 'data.V' (firmware/nnet_utils/nnet_dense_stream.h:35) accessed through non-constant indices on dimension 1 (firmware/nnet_utils/nnet_dense_resource.h:160:20), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<9, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config4_mult>' into 'nnet::conv_2d_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>' (firmware/nnet_utils/nnet_dense_resource.h:414->firmware/nnet_utils/nnet_dense_resource.h:518->firmware/nnet_utils/nnet_conv_stream.h:279->firmware/nnet_utils/nnet_conv2d_stream.h:85->firmware/nnet_utils/nnet_conv2d_stream.h:103) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<9, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config7_mult>' into 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' (firmware/nnet_utils/nnet_dense_resource.h:414->firmware/nnet_utils/nnet_dense_resource.h:518->firmware/nnet_utils/nnet_conv_stream.h:279->firmware/nnet_utils/nnet_conv2d_stream.h:85->firmware/nnet_utils/nnet_conv2d_stream.h:103) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<9, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10_mult>' into 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' (firmware/nnet_utils/nnet_dense_resource.h:414->firmware/nnet_utils/nnet_dense_resource.h:518->firmware/nnet_utils/nnet_conv_stream.h:279->firmware/nnet_utils/nnet_conv2d_stream.h:85->firmware/nnet_utils/nnet_conv2d_stream.h:103) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config12>' into 'nnet::dense_wrapper<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config12>' (firmware/nnet_utils/nnet_dense_resource.h:178->firmware/nnet_utils/nnet_dense_resource.h:526->firmware/nnet_utils/nnet_dense_stream.h:24) automatically.
+INFO: [XFORM 203-721] Changing loop 'Loop_1_proc' (firmware/myproject_axi.cpp:23) to a process function for dataflow in function 'myproject_axi'.
+INFO: [XFORM 203-721] Changing loop 'Loop_2_proc' (firmware/myproject_axi.cpp:37) to a process function for dataflow in function 'myproject_axi'.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 8 process function(s): 
+	 'myproject_Block__proc'
+	 'nnet::zeropad2d_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config14>'
+	 'nnet::conv_2d_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>'
+	 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>'
+	 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>'
+	 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>'
+	 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>'
+	 'nnet::dense<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 10u>, config12>'.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject_axi', detected/extracted 5 process function(s): 
+	 'Block_codeRepl51_proc'
+	 'Loop_1_proc225'
+	 'myproject'
+	 'Block_myproject_axi_.exit52_proc'
+	 'Loop_2_proc'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_mult.h:117:3) to (firmware/nnet_utils/nnet_conv_stream.h:290:5) in function 'nnet::conv_2d_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>'... converting 65 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_mult.h:117:3) to (firmware/nnet_utils/nnet_conv_stream.h:290:5) in function 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>'... converting 65 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_mult.h:117:3) to (firmware/nnet_utils/nnet_conv_stream.h:290:5) in function 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>'... converting 65 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/myproject_axi.cpp:38:91) to (firmware/myproject_axi.cpp:37:50) in function 'Loop_2_proc'... converting 10 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/myproject_axi.cpp:28:25) to (firmware/myproject_axi.cpp:26:41) in function 'Loop_1_proc225'... converting 10 basic blocks.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.27i8P.i5' into 'nnet::conv_2d_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>' (firmware/nnet_utils/nnet_dense_resource.h:396->firmware/nnet_utils/nnet_dense_resource.h:518->firmware/nnet_utils/nnet_conv_stream.h:279->firmware/nnet_utils/nnet_conv2d_stream.h:85->firmware/nnet_utils/nnet_conv2d_stream.h:103).
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::conv_2d_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>' (firmware/nnet_utils/nnet_dense_resource.h:1:20)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' (firmware/nnet_utils/nnet_conv_stream.h:77:5)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' (firmware/nnet_utils/nnet_conv_stream.h:77:5)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:03:41 ; elapsed = 00:03:44 . Memory (MB): peak = 3425.133 ; gain = 2895.223 ; free physical = 71282 ; free virtual = 147551
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'ReadInputWidth' (firmware/nnet_utils/nnet_conv2d_stream.h:79:85) in function 'nnet::conv_2d_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'ReadInputHeight' (firmware/nnet_utils/nnet_conv2d_stream.h:78:80) in function 'nnet::conv_2d_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'ReadInputWidth' (firmware/nnet_utils/nnet_conv2d_stream.h:79:85) in function 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'ReadInputHeight' (firmware/nnet_utils/nnet_conv2d_stream.h:78:80) in function 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'ReadInputWidth' (firmware/nnet_utils/nnet_conv2d_stream.h:79:85) in function 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'ReadInputHeight' (firmware/nnet_utils/nnet_conv2d_stream.h:78:80) in function 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>'.
+WARNING: [XFORM 203-631] Renaming function 'nnet::zeropad2d_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config14>' to 'zeropad2d_cl<array,array<ap_ufixed,3u>,config14>' (firmware/nnet_utils/nnet_padding_stream.h:22:59)
+WARNING: [XFORM 203-631] Renaming function 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config16>' to 'zeropad2d_cl<array,array<ap_fixed,32u>,config16>' (firmware/nnet_utils/nnet_padding_stream.h:16:59)
+WARNING: [XFORM 203-631] Renaming function 'nnet::zeropad2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config15>' to 'zeropad2d_cl<array,array<ap_fixed,32u>,config15>' (firmware/nnet_utils/nnet_padding_stream.h:16:59)
+WARNING: [XFORM 203-631] Renaming function 'nnet::shift_line_buffer<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, config4>' to 'shift_line_buffer<array<ap_ufixed,3u>,config4>' (firmware/nnet_utils/nnet_conv_stream.h:214:1)
+WARNING: [XFORM 203-631] Renaming function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' to 'shift_line_buffer<array<ap_fixed,32u>,config7>' (firmware/nnet_utils/nnet_conv_stream.h:214:1)
+WARNING: [XFORM 203-631] Renaming function 'nnet::shift_line_buffer<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' to 'shift_line_buffer<array<ap_fixed,32u>,config10>' (firmware/nnet_utils/nnet_conv_stream.h:214:1)
+WARNING: [XFORM 203-631] Renaming function 'nnet::dense_wrapper<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config12>' to 'dense_wrapper<ap_fixed,ap_fixed<8,6,5,3,0>,config12>' (firmware/nnet_utils/nnet_dense_resource.h:24:20)
+WARNING: [XFORM 203-631] Renaming function 'nnet::dense<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 10u>, config12>' to 'dense<array,array<ap_fixed<8,6,5,3,0>,10u>,config12>' (firmware/nnet_utils/nnet_dense_stream.h:41:39)
+WARNING: [XFORM 203-631] Renaming function 'nnet::conv_2d_cl<nnet::array<ap_ufixed<8, 0, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config4>' to 'conv_2d_cl<array,array<ap_fixed,32u>,config4>' (firmware/nnet_utils/nnet_dense_resource.h:1:20)
+WARNING: [XFORM 203-631] Renaming function 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config7>' to 'conv_2d_cl<array,array<ap_fixed,32u>,config7>' (firmware/nnet_utils/nnet_conv_stream.h:77:5)
+WARNING: [XFORM 203-631] Renaming function 'nnet::conv_2d_cl<nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, nnet::array<ap_fixed<8, 3, (ap_q_mode)0, (ap_o_mode)0, 0>, 32u>, config10>' to 'conv_2d_cl<array,array<ap_fixed,32u>,config10>' (firmware/nnet_utils/nnet_conv_stream.h:77:5)
+WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'ReadInputHeight_ReadInputWidth' in function 'conv_2d_cl<array,array<ap_fixed,32u>,config7>'.
+WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'ReadInputHeight_ReadInputWidth' in function 'conv_2d_cl<array,array<ap_fixed,32u>,config4>'.
+WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'ReadInputHeight_ReadInputWidth' in function 'conv_2d_cl<array,array<ap_fixed,32u>,config10>'.
+INFO: [HLS 200-472] Inferring partial write operation for 'outidx.1' (firmware/nnet_utils/nnet_dense_resource.h:144:9)
+WARNING: [XFORM 203-532] Unable to perform loop rewinding: Function 'dense_wrapper<ap_fixed,ap_fixed<8,6,5,3,0>,config12>' (firmware/nnet_utils/nnet_dense_stream.h:24:1) contains multiple loops.
+WARNING: [XFORM 203-532] Unable to rewind loop 'ReadInputHeight_ReadInputWidth' in function 'conv_2d_cl<array,array<ap_fixed,32u>,config7>': loop nest is not flattened.
+WARNING: [XFORM 203-532] Unable to rewind loop 'ReadInputHeight_ReadInputWidth' in function 'conv_2d_cl<array,array<ap_fixed,32u>,config4>': loop nest is not flattened.
+WARNING: [XFORM 203-532] Unable to rewind loop 'ReadInputHeight_ReadInputWidth' in function 'conv_2d_cl<array,array<ap_fixed,32u>,config10>': loop nest is not flattened.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:05:44 ; elapsed = 00:05:47 . Memory (MB): peak = 3425.133 ; gain = 2895.223 ; free physical = 71196 ; free virtual = 147468
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'myproject_axi' ...
+WARNING: [SYN 201-103] Legalizing function name 'zeropad2d_cl<array,array<ap_ufixed,3u>,config14>' to 'zeropad2d_cl_array_array_ap_ufixed_3u_config14_s'.
+WARNING: [SYN 201-103] Legalizing function name 'shift_line_buffer<array<ap_ufixed,3u>,config4>' to 'shift_line_buffer_array_ap_ufixed_3u_config4_s'.
+WARNING: [SYN 201-103] Legalizing function name 'conv_2d_cl<array,array<ap_fixed,32u>,config4>' to 'conv_2d_cl_array_array_ap_fixed_32u_config4_s'.
+WARNING: [SYN 201-103] Legalizing function name 'zeropad2d_cl<array,array<ap_fixed,32u>,config15>' to 'zeropad2d_cl_array_array_ap_fixed_32u_config15_s'.
+WARNING: [SYN 201-103] Legalizing function name 'shift_line_buffer<array<ap_fixed,32u>,config7>' to 'shift_line_buffer_array_ap_fixed_32u_config7_s'.
+WARNING: [SYN 201-103] Legalizing function name 'conv_2d_cl<array,array<ap_fixed,32u>,config7>' to 'conv_2d_cl_array_array_ap_fixed_32u_config7_s'.
+WARNING: [SYN 201-103] Legalizing function name 'zeropad2d_cl<array,array<ap_fixed,32u>,config16>' to 'zeropad2d_cl_array_array_ap_fixed_32u_config16_s'.
+WARNING: [SYN 201-103] Legalizing function name 'shift_line_buffer<array<ap_fixed,32u>,config10>' to 'shift_line_buffer_array_ap_fixed_32u_config10_s'.
+WARNING: [SYN 201-103] Legalizing function name 'conv_2d_cl<array,array<ap_fixed,32u>,config10>' to 'conv_2d_cl_array_array_ap_fixed_32u_config10_s'.
+WARNING: [SYN 201-103] Legalizing function name 'dense_wrapper<ap_fixed,ap_fixed<8,6,5,3,0>,config12>' to 'dense_wrapper_ap_fixed_ap_fixed_8_6_5_3_0_config12_s'.
+WARNING: [SYN 201-103] Legalizing function name 'dense<array,array<ap_fixed<8,6,5,3,0>,10u>,config12>' to 'dense_array_array_ap_fixed_8_6_5_3_0_10u_config12_s'.
+WARNING: [SYN 201-103] Legalizing function name 'Block_myproject_axi_.exit52_proc' to 'Block_myproject_axi_exit52_proc'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_1_proc225' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 351.44 seconds; current allocated memory: 621.695 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 622.199 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'zeropad2d_cl_array_array_ap_ufixed_3u_config14_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 622.351 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 622.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_line_buffer_array_ap_ufixed_3u_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'shift_line_buffer<array<ap_ufixed,3u>,config4>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 622.673 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 622.905 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_2d_cl_array_array_ap_fixed_32u_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ReuseLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.8 seconds; current allocated memory: 625.876 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.26 seconds; current allocated memory: 630.958 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'zeropad2d_cl_array_array_ap_fixed_32u_config15_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.7 seconds; current allocated memory: 631.588 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 632.520 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_line_buffer_array_ap_fixed_32u_config7_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'shift_line_buffer<array<ap_fixed,32u>,config7>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.71 seconds; current allocated memory: 634.243 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.82 seconds; current allocated memory: 636.367 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_2d_cl_array_array_ap_fixed_32u_config7_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ReuseLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 4.09 seconds; current allocated memory: 642.456 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 5.68 seconds; current allocated memory: 649.915 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'zeropad2d_cl_array_array_ap_fixed_32u_config16_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 5.28 seconds; current allocated memory: 650.559 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.42 seconds; current allocated memory: 651.491 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_line_buffer_array_ap_fixed_32u_config10_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'shift_line_buffer<array<ap_fixed,32u>,config10>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.81 seconds; current allocated memory: 653.178 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.77 seconds; current allocated memory: 655.300 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_2d_cl_array_array_ap_fixed_32u_config10_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ReuseLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 4.04 seconds; current allocated memory: 661.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 4.62 seconds; current allocated memory: 668.863 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_wrapper_ap_fixed_ap_fixed_8_6_5_3_0_config12_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ReuseLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 6.31 seconds; current allocated memory: 674.327 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 6.02 seconds; current allocated memory: 687.994 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_array_array_ap_fixed_8_6_5_3_0_10u_config12_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'DataPrepare'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 206.65 seconds; current allocated memory: 714.202 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 25.46 seconds; current allocated memory: 739.966 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 21.47 seconds; current allocated memory: 741.165 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 4.49 seconds; current allocated memory: 747.097 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_myproject_axi_exit52_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 3.97 seconds; current allocated memory: 747.794 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 747.966 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_2_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 748.178 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.25 seconds; current allocated memory: 748.528 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_axi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 748.861 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 3.06 seconds; current allocated memory: 751.623 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_1_proc225' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_fpext_32ns_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_1_proc225'.
+INFO: [HLS 200-111]  Elapsed time: 3.1 seconds; current allocated memory: 753.188 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'zeropad2d_cl_array_array_ap_ufixed_3u_config14_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'zeropad2d_cl_array_array_ap_ufixed_3u_config14_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.58 seconds; current allocated memory: 755.319 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_line_buffer_array_ap_ufixed_3u_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_ufixed_3u_config4_s_line_buffer_Array_V_2_0_0' to 'shift_line_buffer_array_ap_ufixed_3u_config4_s_line_buffebkb' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_ufixed_3u_config4_s_line_buffer_Array_V_2_1_0' to 'shift_line_buffer_array_ap_ufixed_3u_config4_s_line_buffecud' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_ufixed_3u_config4_s_line_buffer_Array_V_2_0_1' to 'shift_line_buffer_array_ap_ufixed_3u_config4_s_line_buffedEe' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_ufixed_3u_config4_s_line_buffer_Array_V_2_1_1' to 'shift_line_buffer_array_ap_ufixed_3u_config4_s_line_buffeeOg' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_ufixed_3u_config4_s_line_buffer_Array_V_2_0_2' to 'shift_line_buffer_array_ap_ufixed_3u_config4_s_line_buffefYi' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_ufixed_3u_config4_s_line_buffer_Array_V_2_1_2' to 'shift_line_buffer_array_ap_ufixed_3u_config4_s_line_buffeg8j' due to the length limit 60
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_line_buffer_array_ap_ufixed_3u_config4_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 758.011 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_2d_cl_array_array_ap_fixed_32u_config4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pX' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'sX' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pY' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'sY' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_mux_325_14_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_2d_cl_array_array_ap_fixed_32u_config4_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.64 seconds; current allocated memory: 766.248 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'zeropad2d_cl_array_array_ap_fixed_32u_config15_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'zeropad2d_cl_array_array_ap_fixed_32u_config15_s'.
+INFO: [HLS 200-111]  Elapsed time: 2.97 seconds; current allocated memory: 783.583 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_line_buffer_array_ap_fixed_32u_config7_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_0' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffehbi' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_0' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeibs' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_1' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffejbC' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_1' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffekbM' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_2' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffelbW' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_2' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffemb6' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_3' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffencg' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_3' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeocq' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_4' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffepcA' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_4' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeqcK' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_5' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffercU' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_5' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffesc4' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_6' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffetde' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_6' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeudo' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_7' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffevdy' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_7' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffewdI' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_8' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffexdS' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_8' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeyd2' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_9' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffezec' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_9' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeAem' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_10' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeBew' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_10' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeCeG' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_11' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeDeQ' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_11' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeEe0' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_12' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeFfa' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_12' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeGfk' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_13' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeHfu' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_13' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeIfE' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_14' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeJfO' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_14' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeKfY' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_15' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeLf8' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_15' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeMgi' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_16' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeNgs' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_16' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeOgC' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_17' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffePgM' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_17' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeQgW' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_18' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeRg6' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_18' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeShg' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_19' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeThq' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_19' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeUhA' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_20' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeVhK' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_20' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeWhU' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_21' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeXh4' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_21' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeYie' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_22' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffeZio' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_22' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffe0iy' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_23' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffe1iI' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_23' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffe2iS' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_24' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffe3i2' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_24' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffe4jc' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_25' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffe5jm' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_25' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffe6jw' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_26' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffe7jG' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_26' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffe8jQ' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_27' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffe9j0' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_27' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffebak' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_28' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffebbk' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_28' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffebck' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_29' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffebdk' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_29' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffebek' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_30' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffebfk' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_30' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffebgk' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_0_31' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffebhl' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffer_Array_V_1_1_31' to 'shift_line_buffer_array_ap_fixed_32u_config7_s_line_buffebil' due to the length limit 60
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_line_buffer_array_ap_fixed_32u_config7_s'.
+INFO: [HLS 200-111]  Elapsed time: 5.85 seconds; current allocated memory: 973.349 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_2d_cl_array_array_ap_fixed_32u_config7_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_40' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_41' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_42' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_43' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_44' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_45' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_46' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_47' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_48' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_49' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_50' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_51' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_52' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_53' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_54' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_55' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_56' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_57' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_58' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_59' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_60' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_61' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_62' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_63' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_64' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_65' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_66' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_67' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_68' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_69' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_70' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_71' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_72' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_73' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_74' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_75' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_76' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_77' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_78' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_79' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_80' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_81' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_82' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_83' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_84' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_85' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_86' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_87' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_88' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_89' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_90' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_91' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_92' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_93' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_94' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_95' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_96' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_97' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_98' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_99' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_100' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_101' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_102' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_103' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_104' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_105' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_106' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_107' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_108' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_109' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_110' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_111' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_112' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_113' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_114' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_115' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_116' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_117' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_118' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_119' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_120' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_121' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_122' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_123' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_124' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_125' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_126' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_127' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_128' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_129' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_130' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_131' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_132' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_133' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_134' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_135' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_136' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_137' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_138' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_139' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_140' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_141' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_142' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_143' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_144' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_145' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_146' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_147' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_148' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_149' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_150' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_151' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_152' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_153' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_154' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_155' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_156' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_157' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_158' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_159' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_160' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_161' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_162' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_163' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_164' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_165' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_166' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_167' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_168' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_169' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_170' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_171' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_172' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_173' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_174' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_175' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_176' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_177' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_178' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_179' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_180' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_181' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_182' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_183' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_184' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_185' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_186' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_187' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_188' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_189' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_190' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_191' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_192' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_193' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_194' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_195' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_196' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_197' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_198' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_199' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_200' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_201' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_202' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_203' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_204' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_205' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_206' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_207' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_208' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_209' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_210' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_211' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_212' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_213' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_214' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_215' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_216' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_217' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_218' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_219' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_220' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_221' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_222' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_223' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_224' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_225' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_226' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_227' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_228' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_229' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_230' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_231' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_232' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_233' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_234' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_235' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_236' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_237' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_238' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_239' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_240' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_241' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_242' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_243' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_244' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_245' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_246' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_247' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_248' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_249' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_250' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_251' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_252' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_253' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_254' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_255' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_256' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_257' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_258' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_259' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_260' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_261' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_262' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_263' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_264' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_265' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_266' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_267' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_268' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_269' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_270' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_271' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_272' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_273' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_274' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_275' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_276' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_277' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_278' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_279' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_280' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_281' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_282' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_283' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_284' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_285' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_286' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1_287' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pX_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'sX_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pY_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'sY_1' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_mux_2889_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_mux_325_14_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_2d_cl_array_array_ap_fixed_32u_config7_s'.
+INFO: [HLS 200-111]  Elapsed time: 6.86 seconds; current allocated memory: 1.067 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'zeropad2d_cl_array_array_ap_fixed_32u_config16_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'zeropad2d_cl_array_array_ap_fixed_32u_config16_s'.
+INFO: [HLS 200-111]  Elapsed time: 5.78 seconds; current allocated memory: 1.094 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_line_buffer_array_ap_fixed_32u_config10_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_0' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbjl' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_0' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbkl' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_1' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbll' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_1' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbml' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_2' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbnm' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_2' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbom' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_3' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbpm' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_3' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbqm' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_4' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbrm' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_4' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbsm' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_5' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbtn' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_5' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbun' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_6' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbvn' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_6' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbwn' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_7' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbxn' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_7' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbyn' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_8' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbzo' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_8' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbAo' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_9' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbBo' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_9' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbCo' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_10' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbDo' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_10' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbEo' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_11' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbFp' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_11' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbGp' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_12' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbHp' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_12' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbIp' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_13' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbJp' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_13' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbKp' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_14' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbLp' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_14' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbMq' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_15' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbNq' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_15' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbOq' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_16' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbPq' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_16' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbQq' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_17' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbRq' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_17' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbSr' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_18' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbTr' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_18' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbUr' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_19' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbVr' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_19' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbWr' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_20' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbXr' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_20' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbYs' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_21' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffbZs' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_21' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffb0s' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_22' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffb1s' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_22' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffb2s' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_23' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffb3s' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_23' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffb4t' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_24' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffb5t' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_24' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffb6t' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_25' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffb7t' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_25' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffb8t' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_26' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffb9t' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_26' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffcau' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_27' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffcbu' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_27' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffccu' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_28' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffcdu' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_28' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffceu' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_29' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffcfu' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_29' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffcgu' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_30' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffchv' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_30' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffciv' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_0_31' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffcjv' due to the length limit 60
+INFO: [SYN 201-210] Renamed object name 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffer_Array_V_1181_31' to 'shift_line_buffer_array_ap_fixed_32u_config10_s_line_buffckv' due to the length limit 60
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_line_buffer_array_ap_fixed_32u_config10_s'.
+INFO: [HLS 200-111]  Elapsed time: 6.41 seconds; current allocated memory: 1.278 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_2d_cl_array_array_ap_fixed_32u_config10_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_1182' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_2183' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_40' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_41' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_42' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_43' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_44' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_45' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_46' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_47' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_48' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_49' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_50' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_51' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_52' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_53' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_54' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_55' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_56' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_57' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_58' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_59' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_60' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_61' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_62' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_63' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_64' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_65' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_66' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_67' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_68' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_69' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_70' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_71' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_72' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_73' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_74' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_75' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_76' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_77' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_78' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_79' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_80' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_81' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_82' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_83' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_84' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_85' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_86' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_87' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_88' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_89' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_90' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_91' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_92' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_93' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_94' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_95' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_96' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_97' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_98' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_99' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_100' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_101' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_102' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_103' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_104' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_105' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_106' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_107' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_108' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_109' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_110' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_111' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_112' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_113' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_114' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_115' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_116' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_117' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_118' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_119' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_120' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_121' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_122' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_123' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_124' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_125' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_126' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_127' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_128' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_129' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_130' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_131' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_132' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_133' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_134' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_135' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_136' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_137' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_138' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_139' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_140' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_141' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_142' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_143' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_144' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_145' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_146' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_147' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_148' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_149' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_150' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_151' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_152' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_153' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_154' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_155' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_156' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_157' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_158' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_159' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_160' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_161' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_162' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_163' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_164' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_165' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_166' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_167' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_168' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_169' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_170' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_171' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_172' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_173' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_174' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_175' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_176' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_177' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_178' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_179' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_180' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_181' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_182' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_183' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_184' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_185' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_186' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_187' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_188' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_189' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_190' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_191' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_192' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_193' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_194' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_195' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_196' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_197' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_198' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_199' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_200' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_201' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_202' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_203' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_204' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_205' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_206' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_207' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_208' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_209' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_210' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_211' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_212' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_213' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_214' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_215' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_216' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_217' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_218' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_219' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_220' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_221' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_222' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_223' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_224' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_225' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_226' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_227' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_228' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_229' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_230' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_231' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_232' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_233' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_234' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_235' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_236' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_237' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_238' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_239' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_240' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_241' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_242' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_243' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_244' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_245' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_246' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_247' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_248' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_249' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_250' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_251' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_252' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_253' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_254' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_255' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_256' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_257' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_258' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_259' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_260' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_261' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_262' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_263' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_264' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_265' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_266' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_267' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_268' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_269' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_270' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_271' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_272' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_273' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_274' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_275' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_276' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_277' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_278' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_279' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_280' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_281' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_282' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_283' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_284' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_285' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_286' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'kernel_data_V_287' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pX_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'sX_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pY_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'sY_2' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_mux_2889_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_mux_325_14_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_2d_cl_array_array_ap_fixed_32u_config10_s'.
+INFO: [HLS 200-111]  Elapsed time: 8.73 seconds; current allocated memory: 1.395 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_wrapper_ap_fixed_ap_fixed_8_6_5_3_0_config12_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'dense_wrapper_ap_fixed_ap_fixed_8_6_5_3_0_config12_s_outidx_1' to 'dense_wrapper_ap_fixed_ap_fixed_8_6_5_3_0_config12_s_outiclv' due to the length limit 60
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_mux_104_12_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_mux_204811_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_wrapper_ap_fixed_ap_fixed_8_6_5_3_0_config12_s'.
+INFO: [HLS 200-111]  Elapsed time: 6.4 seconds; current allocated memory: 1.437 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_array_array_ap_fixed_8_6_5_3_0_10u_config12_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_array_array_ap_fixed_8_6_5_3_0_10u_config12_s'.
+INFO: [HLS 200-111]  Elapsed time: 15.77 seconds; current allocated memory: 1.503 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'start_for_dense_array_array_ap_fixed_8_6_5_3_0_10u_config12_U0' to 'start_for_dense_array_array_ap_fixed_8_6_5_3_0_10u_configcmv' due to the length limit 60
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
+INFO: [HLS 200-111]  Elapsed time: 24.13 seconds; current allocated memory: 1.619 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_myproject_axi_exit52_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_myproject_axi_exit52_proc'.
+INFO: [HLS 200-111]  Elapsed time: 5.37 seconds; current allocated memory: 1.626 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_2_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'myproject_axi_mux_104_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_2_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.52 seconds; current allocated memory: 1.627 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject_axi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/in_data' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/in_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/out_data' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/out_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'myproject_axi' to 'ap_ctrl_none'.
+WARNING: [HLS 200-631] Ignoring ap_ctrl_none interface for myproject_axi due to Block_myproject_axi_.exit52_proc with non-FIFO I/O
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_axi'.
+INFO: [HLS 200-111]  Elapsed time: 0.81 seconds; current allocated memory: 1.630 GB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 116.00 MHz
+INFO: [RTMG 210-279] Implementing memory 'conv_2d_cl_array_array_ap_fixed_32u_config4_s_outidx4_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_2d_cl_array_array_ap_fixed_32u_config4_s_w2_V_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_2d_cl_array_array_ap_fixed_32u_config7_s_outidx2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_2d_cl_array_array_ap_fixed_32u_config7_s_w5_V_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'conv_2d_cl_array_array_ap_fixed_32u_config10_s_w8_V_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dense_wrapper_ap_fixed_ap_fixed_8_6_5_3_0_config12_s_w12_V_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'dense_wrapper_ap_fixed_ap_fixed_8_6_5_3_0_config12_s_outiclv_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer14_out_V_data_0_V_U(fifo_w8_d1024_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer14_out_V_data_1_V_U(fifo_w8_d1024_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer14_out_V_data_2_V_U(fifo_w8_d1024_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_0_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_1_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_2_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_3_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_4_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_5_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_6_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_7_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_8_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_9_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_10_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_11_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_12_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_13_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_14_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_15_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_16_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_17_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_18_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_19_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_20_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_21_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_22_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_23_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_24_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_25_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_26_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_27_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_28_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_29_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_30_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer4_out_V_data_31_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_0_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_1_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_2_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_3_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_4_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_5_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_6_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_7_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_8_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_9_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_10_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_11_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_12_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_13_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_14_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_15_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_16_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_17_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_18_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_19_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_20_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_21_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_22_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_23_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_24_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_25_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_26_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_27_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_28_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_29_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_30_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer15_out_V_data_31_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_0_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_1_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_2_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_3_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_4_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_5_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_6_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_7_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_8_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_9_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_10_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_11_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_12_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_13_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_14_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_15_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_16_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_17_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_18_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_19_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_20_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_21_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_22_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_23_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_24_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_25_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_26_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_27_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_28_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_29_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_30_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer7_out_V_data_31_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_0_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_1_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_2_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_3_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_4_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_5_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_6_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_7_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_8_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_9_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_10_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_11_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_12_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_13_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_14_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_15_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_16_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_17_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_18_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_19_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_20_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_21_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_22_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_23_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_24_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_25_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_26_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_27_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_28_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_29_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_30_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer16_out_V_data_31_V_U(fifo_w8_d100_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_0_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_1_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_2_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_3_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_4_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_5_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_6_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_7_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_8_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_9_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_10_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_11_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_12_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_13_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_14_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_15_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_16_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_17_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_18_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_19_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_20_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_21_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_22_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_23_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_24_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_25_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_26_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_27_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_28_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_29_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_30_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_V_data_31_V_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_conv_2d_cl_array_array_ap_fixed_32u_config4_U0_U(start_for_conv_2d_cl_array_array_ap_fixed_32u_config4_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_zeropad2d_cl_array_array_ap_fixed_32u_config15_U0_U(start_for_zeropad2d_cl_array_array_ap_fixed_32u_config15_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_conv_2d_cl_array_array_ap_fixed_32u_config7_U0_U(start_for_conv_2d_cl_array_array_ap_fixed_32u_config7_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_zeropad2d_cl_array_array_ap_fixed_32u_config16_U0_U(start_for_zeropad2d_cl_array_array_ap_fixed_32u_config16_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_conv_2d_cl_array_array_ap_fixed_32u_config10_U0_U(start_for_conv_2d_cl_array_array_ap_fixed_32u_config10_U0)' using Shift Registers.
+INFO: [RTMG 210-285]
