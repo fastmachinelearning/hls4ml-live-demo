@@ -1,0 +1,30 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="solution1"/>
+    </name>
+    <project>
+        <value string="color_convert"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xc7z020:-clg400:-1"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
+        <library value="xilinx/zynq/zynq_fpv6" name="DefaultPlatform"/>
+    </libraryList>
+    <downStreamTool>
+        <DownStreamTool name="vivado"/>
+    </downStreamTool>
+    <clockList>
+        <clock name="default" period="7" default="false"/>
+        <clock name="control" period="10" default="false"/>
+    </clockList>
+    <config>
+        <schedule model="color_convert"/>
+        <config_export description="Color conversion for 24-bit AXI video stream" display_name="Color Convert" format="ip_catalog"/>
+    </config>
+    <ExportDesign askAgain="true" evaluate="false" rtl="verilog" formatName="ip_catalog">
+        <Format formatName="ip_catalog" description="Color conversion for 24-bit AXI video stream" vendor="" library="" ipname="" version="" driver_input_dir="" display_name="Color Convert" taxonomy=""/>
+    </ExportDesign>
+</AutoPilot:solution>
+

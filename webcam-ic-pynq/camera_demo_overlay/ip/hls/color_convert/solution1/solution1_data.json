@@ -1,0 +1,1017 @@
+{
+  "Top": "color_convert",
+  "RtlTop": "color_convert",
+  "RtlPrefix": "",
+  "SourceLanguage": "cpp",
+  "ResetStyle": "control",
+  "GenerateBdFiles": "1",
+  "HostMachineBits": "64",
+  "Target": {
+    "Family": "zynq",
+    "Device": "xc7z020",
+    "Package": "-clg400",
+    "Speed": "-1"
+  },
+  "HlsSolution": {"Config": [
+      "config_export -description {Color conversion for 24-bit AXI video stream}",
+      "config_export -display_name {Color Convert}",
+      "config_export -format=ip_catalog"
+    ]},
+  "Args": {
+    "stream_in_24": {
+      "index": "0",
+      "type": {
+        "kinds": [
+          "struct",
+          "pointer"
+        ],
+        "dataType": "video_stream",
+        "structImpl": "flat-field",
+        "dataPack": true,
+        "fields": {
+          "data": {
+            "order": "0",
+            "kinds": ["struct"],
+            "dataType": "aesl_anonymous1",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true,
+            "fields": {
+              "p1": {
+                "order": "0",
+                "dataType": "ap_int",
+                "structImpl": "flat-field",
+                "dataPack": true
+              },
+              "p2": {
+                "order": "1",
+                "dataType": "ap_int",
+                "structImpl": "flat-field",
+                "dataPack": true
+              },
+              "p3": {
+                "order": "2",
+                "dataType": "ap_int",
+                "structImpl": "flat-field",
+                "dataPack": true
+              }
+            }
+          },
+          "user": {
+            "order": "1",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "stream_in_24",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "last": {
+            "order": "2",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "stream_in_24",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          }
+        }
+      }
+    },
+    "stream_out_24": {
+      "index": "1",
+      "type": {
+        "kinds": [
+          "struct",
+          "pointer"
+        ],
+        "dataType": "video_stream",
+        "structImpl": "flat-field",
+        "dataPack": true,
+        "fields": {
+          "data": {
+            "order": "0",
+            "kinds": ["struct"],
+            "dataType": "aesl_anonymous3",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true,
+            "fields": {
+              "p1": {
+                "order": "0",
+                "dataType": "ap_int",
+                "structImpl": "flat-field",
+                "dataPack": true
+              },
+              "p2": {
+                "order": "1",
+                "dataType": "ap_int",
+                "structImpl": "flat-field",
+                "dataPack": true
+              },
+              "p3": {
+                "order": "2",
+                "dataType": "ap_int",
+                "structImpl": "flat-field",
+                "dataPack": true
+              }
+            }
+          },
+          "user": {
+            "order": "1",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "stream_out_24",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "last": {
+            "order": "2",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "stream_out_24",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          }
+        }
+      }
+    },
+    "c1": {
+      "index": "2",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "coeffs",
+        "structImpl": "flat-field",
+        "dataPack": true,
+        "fields": {
+          "c1": {
+            "order": "0",
+            "dataType": "ap_fixed",
+            "dataWidth": "10",
+            "interfaceRef": "s_axi_AXILiteS",
+            "bitMap": "9:0",
+            "registerRefs": ["c1_c1_V"],
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "c2": {
+            "order": "1",
+            "dataType": "ap_fixed",
+            "dataWidth": "10",
+            "interfaceRef": "s_axi_AXILiteS",
+            "bitMap": "9:0",
+            "registerRefs": ["c1_c2_V"],
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "c3": {
+            "order": "2",
+            "dataType": "ap_fixed",
+            "dataWidth": "10",
+            "interfaceRef": "s_axi_AXILiteS",
+            "bitMap": "9:0",
+            "registerRefs": ["c1_c3_V"],
+            "structImpl": "interface",
+            "dataPack": true
+          }
+        }
+      }
+    },
+    "c2": {
+      "index": "3",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "coeffs",
+        "structImpl": "flat-field",
+        "dataPack": true,
+        "fields": {
+          "c1": {
+            "order": "0",
+            "dataType": "ap_fixed",
+            "dataWidth": "10",
+            "interfaceRef": "s_axi_AXILiteS",
+            "bitMap": "9:0",
+            "registerRefs": ["c2_c1_V"],
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "c2": {
+            "order": "1",
+            "dataType": "ap_fixed",
+            "dataWidth": "10",
+            "interfaceRef": "s_axi_AXILiteS",
+            "bitMap": "9:0",
+            "registerRefs": ["c2_c2_V"],
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "c3": {
+            "order": "2",
+            "dataType": "ap_fixed",
+            "dataWidth": "10",
+            "interfaceRef": "s_axi_AXILiteS",
+            "bitMap": "9:0",
+            "registerRefs": ["c2_c3_V"],
+            "structImpl": "interface",
+            "dataPack": true
+          }
+        }
+      }
+    },
+    "c3": {
+      "index": "4",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "coeffs",
+        "structImpl": "flat-field",
+        "dataPack": true,
+        "fields": {
+          "c1": {
+            "order": "0",
+            "dataType": "ap_fixed",
+            "dataWidth": "10",
+            "interfaceRef": "s_axi_AXILiteS",
+            "bitMap": "9:0",
+            "registerRefs": ["c3_c1_V"],
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "c2": {
+            "order": "1",
+            "dataType": "ap_fixed",
+            "dataWidth": "10",
+            "interfaceRef": "s_axi_AXILiteS",
+            "bitMap": "9:0",
+            "registerRefs": ["c3_c2_V"],
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "c3": {
+            "order": "2",
+            "dataType": "ap_fixed",
+            "dataWidth": "10",
+            "interfaceRef": "s_axi_AXILiteS",
+            "bitMap": "9:0",
+            "registerRefs": ["c3_c3_V"],
+            "structImpl": "interface",
+            "dataPack": true
+          }
+        }
+      }
+    },
+    "bias": {
+      "index": "5",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "coeffs",
+        "structImpl": "flat-field",
+        "dataPack": true,
+        "fields": {
+          "c1": {
+            "order": "0",
+            "dataType": "ap_fixed",
+            "dataWidth": "10",
+            "interfaceRef": "s_axi_AXILiteS",
+            "bitMap": "9:0",
+            "registerRefs": ["bias_c1_V"],
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "c2": {
+            "order": "1",
+            "dataType": "ap_fixed",
+            "dataWidth": "10",
+            "interfaceRef": "s_axi_AXILiteS",
+            "bitMap": "9:0",
+            "registerRefs": ["bias_c2_V"],
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "c3": {
+            "order": "2",
+            "dataType": "ap_fixed",
+            "dataWidth": "10",
+            "interfaceRef": "s_axi_AXILiteS",
+            "bitMap": "9:0",
+            "registerRefs": ["bias_c3_V"],
+            "structImpl": "interface",
+            "dataPack": true
+          }
+        }
+      }
+    }
+  },
+  "Return": {
+    
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "7",
+    "IsCombLogic": "0",
+    "II": "1",
+    "Latency": "6",
+    "Uncertainty": "0.875"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 7.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "color_convert",
+    "Version": "1.0",
+    "DisplayName": "Color Convert",
+    "Revision": "",
+    "Description": "Color conversion for 24-bit AXI video stream",
+    "Taxonomy": "\/VIVADO_HLS_IP",
+    "AutoFamilySupport": ""
+  },
+  "Files": {
+    "CSource": ["..\/color_convert.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/color_convert_AXILiteS_s_axi.vhd",
+      "impl\/vhdl\/color_convert_macbkb.vhd",
+      "impl\/vhdl\/color_convert_maccud.vhd",
+      "impl\/vhdl\/regslice_core.vhd",
+      "impl\/vhdl\/color_convert.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/color_convert_AXILiteS_s_axi.v",
+      "impl\/verilog\/color_convert_macbkb.v",
+      "impl\/verilog\/color_convert_maccud.v",
+      "impl\/verilog\/regslice_core.v",
+      "impl\/verilog\/color_convert.v"
+    ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/color_convert_v1_0\/data\/color_convert.mdd",
+      "impl\/misc\/drivers\/color_convert_v1_0\/data\/color_convert.tcl",
+      "impl\/misc\/drivers\/color_convert_v1_0\/src\/Makefile",
+      "impl\/misc\/drivers\/color_convert_v1_0\/src\/xcolor_convert.c",
+      "impl\/misc\/drivers\/color_convert_v1_0\/src\/xcolor_convert.h",
+      "impl\/misc\/drivers\/color_convert_v1_0\/src\/xcolor_convert_hw.h",
+      "impl\/misc\/drivers\/color_convert_v1_0\/src\/xcolor_convert_linux.c",
+      "impl\/misc\/drivers\/color_convert_v1_0\/src\/xcolor_convert_sinit.c"
+    ],
+    "Misc": ["impl\/misc\/logo.png"],
+    "DesignXml": "C:\/Users\/mrigatti\/Desktop\/PYNQ\/GitHub\/PYNQ-2.6.0\/boards\/ip\/hls\/color_convert\/solution1\/.autopilot\/db\/color_convert.design.xml",
+    "DebugDir": "C:\/Users\/mrigatti\/Desktop\/PYNQ\/GitHub\/PYNQ-2.6.0\/boards\/ip\/hls\/color_convert\/solution1\/.debug",
+    "ProtoInst": ["C:\/Users\/mrigatti\/Desktop\/PYNQ\/GitHub\/PYNQ-2.6.0\/boards\/ip\/hls\/color_convert\/solution1\/.debug\/color_convert.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "IP": []
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "bundle_name": "ap_clk",
+      "bundle_role": "default",
+      "buses": "stream_in_24 stream_out_24",
+      "reset": "ap_rst_n"
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "polarity": "ACTIVE_LOW",
+      "ctype": {"RST": {"Type": "bool"}},
+      "bundle_name": "ap_rst_n",
+      "bundle_role": "default"
+    },
+    "ap_rst_n_control": {
+      "type": "reset",
+      "ctype": {"RST": {"Type": "bool"}},
+      "bundle_name": "AXILiteS",
+      "bundle_role": "axilite_rst",
+      "polarity": "ACTIVE_LOW"
+    },
+    "control": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "bundle_name": "AXILiteS",
+      "bundle_role": "axilite_clk",
+      "buses": "s_axi_AXILiteS",
+      "reset": "ap_rst_n_control"
+    },
+    "s_axi_AXILiteS": {
+      "type": "axi4lite",
+      "is_adaptor": "true",
+      "mode": "slave",
+      "port_prefix": "s_axi_AXILiteS",
+      "param_prefix": "C_S_AXI_AXILITES",
+      "addr_bits": "7",
+      "registers": [
+        {
+          "offset": "0x10",
+          "name": "c1_c1_V",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of c1_c1_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "10",
+              "name": "c1_c1_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 9 to 0 Data signal of c1_c1_V"
+            },
+            {
+              "offset": "10",
+              "width": "22",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x18",
+          "name": "c1_c2_V",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of c1_c2_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "10",
+              "name": "c1_c2_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 9 to 0 Data signal of c1_c2_V"
+            },
+            {
+              "offset": "10",
+              "width": "22",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x20",
+          "name": "c1_c3_V",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of c1_c3_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "10",
+              "name": "c1_c3_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 9 to 0 Data signal of c1_c3_V"
+            },
+            {
+              "offset": "10",
+              "width": "22",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x28",
+          "name": "c2_c1_V",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of c2_c1_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "10",
+              "name": "c2_c1_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 9 to 0 Data signal of c2_c1_V"
+            },
+            {
+              "offset": "10",
+              "width": "22",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x30",
+          "name": "c2_c2_V",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of c2_c2_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "10",
+              "name": "c2_c2_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 9 to 0 Data signal of c2_c2_V"
+            },
+            {
+              "offset": "10",
+              "width": "22",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x38",
+          "name": "c2_c3_V",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of c2_c3_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "10",
+              "name": "c2_c3_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 9 to 0 Data signal of c2_c3_V"
+            },
+            {
+              "offset": "10",
+              "width": "22",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x40",
+          "name": "c3_c1_V",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of c3_c1_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "10",
+              "name": "c3_c1_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 9 to 0 Data signal of c3_c1_V"
+            },
+            {
+              "offset": "10",
+              "width": "22",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x48",
+          "name": "c3_c2_V",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of c3_c2_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "10",
+              "name": "c3_c2_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 9 to 0 Data signal of c3_c2_V"
+            },
+            {
+              "offset": "10",
+              "width": "22",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x50",
+          "name": "c3_c3_V",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of c3_c3_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "10",
+              "name": "c3_c3_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 9 to 0 Data signal of c3_c3_V"
+            },
+            {
+              "offset": "10",
+              "width": "22",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x58",
+          "name": "bias_c1_V",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of bias_c1_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "10",
+              "name": "bias_c1_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 9 to 0 Data signal of bias_c1_V"
+            },
+            {
+              "offset": "10",
+              "width": "22",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x60",
+          "name": "bias_c2_V",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of bias_c2_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "10",
+              "name": "bias_c2_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 9 to 0 Data signal of bias_c2_V"
+            },
+            {
+              "offset": "10",
+              "width": "22",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x68",
+          "name": "bias_c3_V",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of bias_c3_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "10",
+              "name": "bias_c3_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 9 to 0 Data signal of bias_c3_V"
+            },
+            {
+              "offset": "10",
+              "width": "22",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        }
+      ],
+      "ctype": {
+        "AWVALID": {"Type": "bool"},
+        "AWREADY": {"Type": "bool"},
+        "WVALID": {"Type": "bool"},
+        "WREADY": {"Type": "bool"},
+        "BVALID": {"Type": "bool"},
+        "BREADY": {"Type": "bool"},
+        "BRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARVALID": {"Type": "bool"},
+        "ARREADY": {"Type": "bool"},
+        "RVALID": {"Type": "bool"},
+        "RREADY": {"Type": "bool"},
+        "RRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWADDR": {
+          "Type": "integer unsigned",
+          "Width": "7"
+        },
+        "WDATA": {
+          "Type": "real fixed signed 8",
+          "Width": "10"
+        },
+        "WSTRB": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARADDR": {
+          "Type": "integer unsigned",
+          "Width": "7"
+        },
+        "RDATA": {
+          "Type": "real fixed signed 8",
+          "Width": "10"
+        }
+      },
+      "data_width": "32",
+      "port_width": {
+        "ARADDR": "7",
+        "AWADDR": "7",
+        "RDATA": "32",
+        "WDATA": "32",
+        "WSTRB": "4"
+      }
+    },
+    "stream_in_24": {
+      "type": "axi4stream",
+      "mode": "slave",
+      "port_prefix": "stream_in_24",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "struct",
+          "Width": "24",
+          "Fields": {
+            "p1": {
+              "Type": "integer signed",
+              "Width": "8"
+            },
+            "p2": {
+              "Type": "integer signed",
+              "Width": "8"
+            },
+            "p3": {
+              "Type": "integer signed",
+              "Width": "8"
+            }
+          }
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"},
+        "TLAST": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "TUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        }
+      },
+      "port_width": {
+        "TDATA": "24",
+        "TLAST": "1",
+        "TUSER": "1"
+      }
+    },
+    "stream_out_24": {
+      "type": "axi4stream",
+      "mode": "master",
+      "port_prefix": "stream_out_24",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "struct",
+          "Width": "24",
+          "Fields": {
+            "p1": {
+              "Type": "integer signed",
+              "Width": "8"
+            },
+            "p2": {
+              "Type": "integer signed",
+              "Width": "8"
+            },
+            "p3": {
+              "Type": "integer signed",
+              "Width": "8"
+            }
+          }
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"},
+        "TLAST": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "TUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        }
+      },
+      "port_width": {
+        "TDATA": "24",
+        "TLAST": "1",
+        "TUSER": "1"
+      }
+    }
+  },
+  "RtlPorts": {
+    "s_axi_AXILiteS_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_AWADDR": {
+      "dir": "in",
+      "width": "7"
+    },
+    "s_axi_AXILiteS_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_AXILiteS_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_AXILiteS_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_ARADDR": {
+      "dir": "in",
+      "width": "7"
+    },
+    "s_axi_AXILiteS_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_AXILiteS_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_AXILiteS_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "control": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n_control": {
+      "dir": "in",
+      "width": "1"
+    },
+    "stream_in_24_TDATA": {
+      "dir": "in",
+      "width": "24"
+    },
+    "stream_in_24_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "stream_in_24_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "stream_in_24_TLAST": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "stream_in_24_TUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "stream_out_24_TDATA": {
+      "dir": "out",
+      "width": "24"
+    },
+    "stream_out_24_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "stream_out_24_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "stream_out_24_TLAST": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "stream_out_24_TUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {"ModuleName": "color_convert"},
+    "Info": {"color_convert": {
+        "FunctionProtocol": "ap_ctrl_none",
+        "isTaskLevelControl": "1",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }},
+    "Metrics": {"color_convert": {
+        "Latency": {
+          "LatencyBest": "6",
+          "LatencyAvg": "6",
+          "LatencyWorst": "6",
+          "PipelineII": "1",
+          "PipelineDepth": "7",
+          "PipelineType": "function"
+        },
+        "Timing": {
+          "Target": "7.00",
+          "Uncertainty": "0.88",
+          "Estimate": "6.380"
+        },
+        "Area": {
+          "BRAM_18K": "0",
+          "DSP48E": "6",
+          "FF": "1099",
+          "LUT": "1009",
+          "URAM": "0"
+        }
+      }}
+  },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "XO": "",
+    "KernelName": "color_convert",
+    "EnableXoSwEmu": "1"
+  },
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2022-06-30 11:12:28 -0500",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2020.1"
+  }
+}
