@@ -1,0 +1,859 @@
+{
+  "Top": "trace_cntrl_64",
+  "RtlTop": "trace_cntrl_64",
+  "RtlPrefix": "",
+  "SourceLanguage": "cpp",
+  "ResetStyle": "control",
+  "GenerateBdFiles": "1",
+  "HostMachineBits": "64",
+  "Target": {
+    "Family": "zynq",
+    "Device": "xc7z020",
+    "Package": "-clg484",
+    "Speed": "-1"
+  },
+  "HlsSolution": {"Config": [
+      "config_export -description {Controller for the trace analyzer with 64-bit data}",
+      "config_export -display_name {Trace Analyzer Controller with 64 Bits Data}",
+      "config_export -format=ip_catalog",
+      "config_export -version=1.4"
+    ]},
+  "Args": {
+    "trace_64": {
+      "index": "0",
+      "type": {
+        "kinds": [
+          "struct",
+          "pointer"
+        ],
+        "dataType": "ap_axis<64, 1, 1, 1>",
+        "structImpl": "flat-field",
+        "dataPack": true,
+        "fields": {
+          "data": {
+            "order": "0",
+            "dataType": "ap_int",
+            "dataWidth": "64",
+            "interfaceRef": "trace_64",
+            "bitMap": "63:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "keep": {
+            "order": "1",
+            "dataType": "ap_uint",
+            "dataWidth": "8",
+            "interfaceRef": "trace_64",
+            "bitMap": "7:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "strb": {
+            "order": "2",
+            "dataType": "ap_uint",
+            "dataWidth": "8",
+            "interfaceRef": "trace_64",
+            "bitMap": "7:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "user": {
+            "order": "3",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "trace_64",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "last": {
+            "order": "4",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "trace_64",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "id": {
+            "order": "5",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "trace_64",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "dest": {
+            "order": "6",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "trace_64",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          }
+        }
+      }
+    },
+    "capture_64": {
+      "index": "1",
+      "type": {
+        "kinds": [
+          "struct",
+          "pointer"
+        ],
+        "dataType": "ap_axis<64, 1, 1, 1>",
+        "structImpl": "flat-field",
+        "dataPack": true,
+        "fields": {
+          "data": {
+            "order": "0",
+            "dataType": "ap_int",
+            "dataWidth": "64",
+            "interfaceRef": "capture_64",
+            "bitMap": "63:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "keep": {
+            "order": "1",
+            "dataType": "ap_uint",
+            "dataWidth": "8",
+            "interfaceRef": "capture_64",
+            "bitMap": "7:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "strb": {
+            "order": "2",
+            "dataType": "ap_uint",
+            "dataWidth": "8",
+            "interfaceRef": "capture_64",
+            "bitMap": "7:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "user": {
+            "order": "3",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "capture_64",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "last": {
+            "order": "4",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "capture_64",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "id": {
+            "order": "5",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "capture_64",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "dest": {
+            "order": "6",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "capture_64",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          }
+        }
+      }
+    },
+    "trigger": {
+      "index": "2",
+      "type": {
+        "dataType": "ap_int",
+        "dataWidth": "64",
+        "interfaceRef": "s_axi_trace_cntrl",
+        "registerRefs": [
+          "trigger_V_1",
+          "trigger_V_2"
+        ]
+      }
+    },
+    "length": {
+      "index": "3",
+      "type": {
+        "dataType": "int",
+        "dataWidth": "32",
+        "interfaceRef": "s_axi_trace_cntrl",
+        "registerRefs": ["length_r"]
+      }
+    }
+  },
+  "Return": {
+    
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "10",
+    "IsCombLogic": "0",
+    "II": "x",
+    "Latency": "undef",
+    "Uncertainty": "1.25"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "trace_cntrl_64",
+    "Version": "1.4",
+    "DisplayName": "Trace Analyzer Controller with 64 Bits Data",
+    "Revision": "",
+    "Description": "Controller for the trace analyzer with 64-bit data",
+    "Taxonomy": "\/VIVADO_HLS_IP",
+    "AutoFamilySupport": ""
+  },
+  "Files": {
+    "CSource": ["..\/trace_cntrl_64.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/regslice_core.vhd",
+      "impl\/vhdl\/trace_cntrl_64_trace_cntrl_s_axi.vhd",
+      "impl\/vhdl\/trace_cntrl_64.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/regslice_core.v",
+      "impl\/verilog\/trace_cntrl_64_trace_cntrl_s_axi.v",
+      "impl\/verilog\/trace_cntrl_64.v"
+    ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/trace_cntrl_64_v1_4\/data\/trace_cntrl_64.mdd",
+      "impl\/misc\/drivers\/trace_cntrl_64_v1_4\/data\/trace_cntrl_64.tcl",
+      "impl\/misc\/drivers\/trace_cntrl_64_v1_4\/src\/Makefile",
+      "impl\/misc\/drivers\/trace_cntrl_64_v1_4\/src\/xtrace_cntrl_64.c",
+      "impl\/misc\/drivers\/trace_cntrl_64_v1_4\/src\/xtrace_cntrl_64.h",
+      "impl\/misc\/drivers\/trace_cntrl_64_v1_4\/src\/xtrace_cntrl_64_hw.h",
+      "impl\/misc\/drivers\/trace_cntrl_64_v1_4\/src\/xtrace_cntrl_64_linux.c",
+      "impl\/misc\/drivers\/trace_cntrl_64_v1_4\/src\/xtrace_cntrl_64_sinit.c"
+    ],
+    "Misc": ["impl\/misc\/logo.png"],
+    "DesignXml": "C:\/Users\/mrigatti\/Desktop\/PYNQ\/GitHub\/PYNQ-2.6.0\/boards\/ip\/hls\/trace_cntrl_64\/solution1\/.autopilot\/db\/trace_cntrl_64.design.xml",
+    "DebugDir": "C:\/Users\/mrigatti\/Desktop\/PYNQ\/GitHub\/PYNQ-2.6.0\/boards\/ip\/hls\/trace_cntrl_64\/solution1\/.debug",
+    "ProtoInst": ["C:\/Users\/mrigatti\/Desktop\/PYNQ\/GitHub\/PYNQ-2.6.0\/boards\/ip\/hls\/trace_cntrl_64\/solution1\/.debug\/trace_cntrl_64.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "IP": []
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "bundle_name": "ap_clk",
+      "bundle_role": "default",
+      "buses": "s_axi_trace_cntrl trace_64 capture_64",
+      "reset": "ap_rst_n"
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "polarity": "ACTIVE_LOW",
+      "ctype": {"RST": {"Type": "bool"}},
+      "bundle_name": "ap_rst_n",
+      "bundle_role": "default"
+    },
+    "capture_64": {
+      "type": "axi4stream",
+      "mode": "master",
+      "port_prefix": "capture_64",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "integer signed",
+          "Width": "64"
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"},
+        "TDEST": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "TKEEP": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        },
+        "TSTRB": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        },
+        "TUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "TLAST": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "TID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        }
+      },
+      "port_width": {
+        "TDATA": "64",
+        "TDEST": "1",
+        "TID": "1",
+        "TKEEP": "8",
+        "TLAST": "1",
+        "TSTRB": "8",
+        "TUSER": "1"
+      }
+    },
+    "interrupt": {
+      "type": "interrupt",
+      "ctype": {"INTERRUPT": {"Type": "bool"}},
+      "bundle_name": "trace_cntrl",
+      "bundle_role": "interrupt"
+    },
+    "s_axi_trace_cntrl": {
+      "type": "axi4lite",
+      "is_adaptor": "true",
+      "mode": "slave",
+      "port_prefix": "s_axi_trace_cntrl",
+      "param_prefix": "C_S_AXI_TRACE_CNTRL",
+      "addr_bits": "6",
+      "registers": [
+        {
+          "offset": "0x00",
+          "name": "CTRL",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "Control signals",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "AP_START",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_start'."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "AP_DONE",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_done'."
+            },
+            {
+              "offset": "2",
+              "width": "1",
+              "name": "AP_IDLE",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_idle'."
+            },
+            {
+              "offset": "3",
+              "width": "1",
+              "name": "AP_READY",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_ready'."
+            },
+            {
+              "offset": "4",
+              "width": "3",
+              "name": "RESERVED_1",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            },
+            {
+              "offset": "7",
+              "width": "1",
+              "name": "AUTO_RESTART",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Control signal Register for 'auto_restart'."
+            },
+            {
+              "offset": "8",
+              "width": "24",
+              "name": "RESERVED_2",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x04",
+          "name": "GIER",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "Global Interrupt Enable Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "Enable",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x08",
+          "name": "IP_IER",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "IP Interrupt Enable Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_EN",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_EN",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x0c",
+          "name": "IP_ISR",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "IP Interrupt Status Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_ST",
+              "access": "RTOW",
+              "reset_value": "0",
+              "description": "Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 input interrupt, 1 = Channel 0 input interrup"
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_ST",
+              "access": "RTOW",
+              "reset_value": "0",
+              "description": "Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 input interrupt, 1 = Channel 1 input interrup"
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x10",
+          "name": "trigger_V_1",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of trigger_V",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "trigger_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of trigger_V"
+            }]
+        },
+        {
+          "offset": "0x14",
+          "name": "trigger_V_2",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of trigger_V",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "trigger_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 63 to 32 Data signal of trigger_V"
+            }]
+        },
+        {
+          "offset": "0x1c",
+          "name": "length_r",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of length_r",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "length_r",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of length_r"
+            }]
+        }
+      ],
+      "ctype": {
+        "AWVALID": {"Type": "bool"},
+        "AWREADY": {"Type": "bool"},
+        "WVALID": {"Type": "bool"},
+        "WREADY": {"Type": "bool"},
+        "BVALID": {"Type": "bool"},
+        "BREADY": {"Type": "bool"},
+        "BRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARVALID": {"Type": "bool"},
+        "ARREADY": {"Type": "bool"},
+        "RVALID": {"Type": "bool"},
+        "RREADY": {"Type": "bool"},
+        "RRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWADDR": {
+          "Type": "integer unsigned",
+          "Width": "6"
+        },
+        "WDATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        },
+        "WSTRB": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARADDR": {
+          "Type": "integer unsigned",
+          "Width": "6"
+        },
+        "RDATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }
+      },
+      "data_width": "32",
+      "port_width": {
+        "ARADDR": "6",
+        "AWADDR": "6",
+        "RDATA": "32",
+        "WDATA": "32",
+        "WSTRB": "4"
+      }
+    },
+    "trace_64": {
+      "type": "axi4stream",
+      "mode": "slave",
+      "port_prefix": "trace_64",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "integer signed",
+          "Width": "64"
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"},
+        "TDEST": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "TKEEP": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        },
+        "TSTRB": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        },
+        "TUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "TLAST": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "TID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        }
+      },
+      "port_width": {
+        "TDATA": "64",
+        "TDEST": "1",
+        "TID": "1",
+        "TKEEP": "8",
+        "TLAST": "1",
+        "TSTRB": "8",
+        "TUSER": "1"
+      }
+    }
+  },
+  "RtlPorts": {
+    "s_axi_trace_cntrl_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_trace_cntrl_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_trace_cntrl_AWADDR": {
+      "dir": "in",
+      "width": "6"
+    },
+    "s_axi_trace_cntrl_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_trace_cntrl_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_trace_cntrl_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_trace_cntrl_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_trace_cntrl_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_trace_cntrl_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_trace_cntrl_ARADDR": {
+      "dir": "in",
+      "width": "6"
+    },
+    "s_axi_trace_cntrl_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_trace_cntrl_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_trace_cntrl_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_trace_cntrl_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_trace_cntrl_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_trace_cntrl_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_trace_cntrl_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "interrupt": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "trace_64_TDATA": {
+      "dir": "in",
+      "width": "64"
+    },
+    "trace_64_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "trace_64_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "trace_64_TDEST": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "trace_64_TKEEP": {
+      "dir": "in",
+      "width": "8"
+    },
+    "trace_64_TSTRB": {
+      "dir": "in",
+      "width": "8"
+    },
+    "trace_64_TUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "trace_64_TLAST": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "trace_64_TID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "capture_64_TDATA": {
+      "dir": "out",
+      "width": "64"
+    },
+    "capture_64_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "capture_64_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "capture_64_TDEST": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "capture_64_TKEEP": {
+      "dir": "out",
+      "width": "8"
+    },
+    "capture_64_TSTRB": {
+      "dir": "out",
+      "width": "8"
+    },
+    "capture_64_TUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "capture_64_TLAST": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "capture_64_TID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {"ModuleName": "trace_cntrl_64"},
+    "Info": {"trace_cntrl_64": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }},
+    "Metrics": {"trace_cntrl_64": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "6.873"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "1",
+            "PipelineDepth": "3"
+          }],
+        "Area": {
+          "BRAM_18K": "0",
+          "FF": "399",
+          "LUT": "602",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      }}
+  },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "XO": "",
+    "KernelName": "trace_cntrl_64",
+    "EnableXoSwEmu": "1"
+  },
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2022-06-30 11:13:52 -0500",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2020.1"
+  }
+}
