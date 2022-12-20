@@ -1,0 +1,101 @@
+AcceleratorConfig:
+  Driver: python
+  Interface: axi_stream
+  Precision:
+    Input: float
+    Output: float
+ApplyPatches: 0
+Backend: VivadoAccelerator
+Board: pynq-z2
+ClockPeriod: 10
+HLSConfig:
+  LayerName:
+    input_1:
+      Precision: ap_ufixed<8,0>
+      ReuseFactor: 16384
+      Trace: false
+    q_activation:
+      Precision:
+        default: ap_fixed<9,6>
+        result: ap_fixed<8,3,AP_RND,AP_SAT>
+      ReuseFactor: 16384
+      Trace: false
+    q_activation_1:
+      Precision:
+        default: ap_fixed<9,6>
+        result: ap_fixed<8,3,AP_RND,AP_SAT>
+      ReuseFactor: 16384
+      Trace: false
+    q_activation_2:
+      Precision:
+        default: ap_fixed<9,6>
+        result: ap_fixed<8,3,AP_RND,AP_SAT>
+      ReuseFactor: 16384
+      Trace: false
+    q_conv2d_batchnorm:
+      Precision:
+        bias: ap_fixed<8,3>
+        default: ap_fixed<9,6>
+        result: ap_fixed<9,6>
+        weight: ap_fixed<8,3>
+      ReuseFactor: 16384
+      Trace: false
+      accum_t: ap_fixed<14,6>
+      force_dsp: 0
+    q_conv2d_batchnorm_1:
+      Precision:
+        bias: ap_fixed<8,3>
+        default: ap_fixed<9,6>
+        result: ap_fixed<9,6>
+        weight: ap_fixed<8,3>
+      ReuseFactor: 16384
+      Trace: false
+      accum_t: ap_fixed<14,6>
+      force_dsp: 0
+    q_conv2d_batchnorm_1_linear:
+      Precision:
+        default: ap_fixed<8,6>
+        result: ap_fixed<8,6>
+    q_conv2d_batchnorm_2:
+      Precision:
+        bias: ap_fixed<8,3>
+        default: ap_fixed<9,6>
+        result: ap_fixed<9,6>
+        weight: ap_fixed<8,3>
+      ReuseFactor: 16384
+      Trace: false
+      accum_t: ap_fixed<14,6>
+      force_dsp: 0
+    q_conv2d_batchnorm_2_linear:
+      Precision:
+        default: ap_fixed<9,6>
+        result: ap_fixed<9,6>
+    q_conv2d_batchnorm_linear:
+      Precision:
+        default: ap_fixed<9,6>
+        result: ap_fixed<9,6>
+    q_dense:
+      Precision:
+        bias: ap_fixed<8,3>
+        default: ap_fixed<8,6>
+        result: ap_fixed<8,6>
+        weight: ap_fixed<8,3>
+      ReuseFactor: 16384
+      Trace: false
+      accum_t: ap_fixed<12,6>
+      force_dsp: 0
+  Model:
+    MergedRelu: 1
+    Precision: ap_fixed<8,6>
+    ReuseFactor: 16384
+    Strategy: Resource
+  SkipOptimizers:
+  - reshape_stream
+IOType: io_stream
+InputData: /data1/jcampos/tinyml_demo/X_test.npy
+KerasModel: !keras_model 'pynqz2_rn06_v8/keras_model.h5'
+OutputDir: pynqz2_rn06_v8
+OutputPredictions: /data1/jcampos/tinyml_demo/y_test.npy
+ProjectName: myproject
+Stamp: d7D3dB6c
+XilinxPart: xc7z020clg400-1
