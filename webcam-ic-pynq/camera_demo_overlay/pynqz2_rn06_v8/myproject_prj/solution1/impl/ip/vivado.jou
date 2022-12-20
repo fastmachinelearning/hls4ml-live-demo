@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2.1 (64-bit)
+# SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
+# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+# Start of session at: Tue Aug  9 17:19:31 2022
+# Process ID: 37258
+# Current directory: /data1/jcampos/tinyml_demo/submissions_tiny_0.7/open/hls4ml-finn/code/ic/RN07/inference/pynq-z2/pynqz2_rn06_v8/myproject_prj/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /data1/jcampos/tinyml_demo/submissions_tiny_0.7/open/hls4ml-finn/code/ic/RN07/inference/pynq-z2/pynqz2_rn06_v8/myproject_prj/solution1/impl/ip/vivado.log
+# Journal file: /data1/jcampos/tinyml_demo/submissions_tiny_0.7/open/hls4ml-finn/code/ic/RN07/inference/pynq-z2/pynqz2_rn06_v8/myproject_prj/solution1/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
