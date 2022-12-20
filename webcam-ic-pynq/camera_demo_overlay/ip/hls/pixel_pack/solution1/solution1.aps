@@ -1,0 +1,30 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="solution1"/>
+    </name>
+    <project>
+        <value string="pixel_pack"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xc7z020:-clg400:-1"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
+        <library value="xilinx/zynq/zynq_fpv6" name="DefaultPlatform"/>
+    </libraryList>
+    <downStreamTool>
+        <DownStreamTool name="vivado"/>
+    </downStreamTool>
+    <clockList>
+        <clock name="default" period="7" default="false"/>
+        <clock name="control" period="10" default="false"/>
+    </clockList>
+    <config>
+        <schedule model="pixel_pack"/>
+        <config_export description="Pixel Packing from 24-bit to 32-bit" display_name="Pixel Pack" format="ip_catalog"/>
+    </config>
+    <ExportDesign askAgain="true" evaluate="false" rtl="verilog" formatName="ip_catalog">
+        <Format formatName="ip_catalog" description="Pixel Packing from 24-bit to 32-bit" vendor="" library="" ipname="" version="" driver_input_dir="" display_name="Pixel Pack" taxonomy=""/>
+    </ExportDesign>
+</AutoPilot:solution>
+
