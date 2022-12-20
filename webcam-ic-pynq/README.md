@@ -23,5 +23,28 @@ For the project the following parts are required:
 This project use the USB input and the HDMI output of the PYNQ Z2 board; the IP of the Neural Network is generated with the hls4ml and it is implemented modifying the PYNQ Overlay. The base overlay contains a HDMI output controller and Petalinux provides the USB Device Driver (https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18842272/Zynq+Linux+USB+Device+Driver).  
 
 ### Part 1: Setup the PYNQ Z2
-To setup the board is enough to follow the manual: https://github.com/Xilinx/PYNQ
+To setup the board follow the manual: https://github.com/Xilinx/PYNQ
 ![image](https://user-images.githubusercontent.com/103663080/208415571-d2d1512c-b64d-44ec-9d0f-ee9c92a2ce89.png)
+
+Once the PYNQ Z2 is setup, connect the USB port of the board to the webcam and the HDMI out to the monitor. 
+
+### Part 2: Generate the Overlay
+The PYNQ Z2 has 512 MB external DDR memory connected to a DDR memory controller in the Zynq PS and connected with direct path to the PL. 
+
+The USB input controller can stream data to DDR memory for image capture using a DMA. Similarly, the HDMI output can stream data from DDR memory for output display using a seperate DMA.
+
+From a top level perspective, the image processing pipeline involves sending data to the resize IP accelerator and to the Neural Network via the DMA and reading back data. In essence we have a loop back setup between the DMA and PS DDR memroy with the accelerator in the middle. The DMA has to be configured with a read and a write channel.
+
+![image](https://user-images.githubusercontent.com/103663080/208722748-c7d8f317-b6c5-4774-908c-c12b3e5209bd.png)
+
+The .bit and .hwh files are already in the folder Overlay.
+To generate the Overlay in Vivado and the .bit and .hwh files, the project has been provided with the TCL files to generate it. 
+
+Open Vivado 2019.2 and in the TCL console navigate to the camera_demo_overlay folder.
+
+  ````` 
+  # To build the project:
+    source camera_demo.tcl
+  # To implement and generate the bitstream
+    source implement_camera_demo.tcl
+  # The .bit and .hwh files are in the folder camera_demo_overlay/output
