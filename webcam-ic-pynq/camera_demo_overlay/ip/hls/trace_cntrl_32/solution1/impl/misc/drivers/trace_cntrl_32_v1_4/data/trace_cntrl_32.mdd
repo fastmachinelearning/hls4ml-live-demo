@@ -1,0 +1,16 @@
+# ==============================================================
+# Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+# Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+# ==============================================================
+OPTION psf_version = 2.1;
+
+BEGIN driver trace_cntrl_32
+
+ OPTION supported_peripherals = (trace_cntrl_32_v1_4 );
+ OPTION driver_state = ACTIVE;
+ OPTION copyfiles = all;
+ OPTION name = trace_cntrl_32;
+ OPTION version = 1.4;
+
+END driver
+

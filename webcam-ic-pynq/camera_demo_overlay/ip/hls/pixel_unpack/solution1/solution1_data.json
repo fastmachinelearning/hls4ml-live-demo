@@ -1,0 +1,544 @@
+{
+  "Top": "pixel_unpack",
+  "RtlTop": "pixel_unpack",
+  "RtlPrefix": "",
+  "SourceLanguage": "cpp",
+  "ResetStyle": "control",
+  "GenerateBdFiles": "1",
+  "HostMachineBits": "64",
+  "Target": {
+    "Family": "zynq",
+    "Device": "xc7z020",
+    "Package": "-clg400",
+    "Speed": "-1"
+  },
+  "HlsSolution": {"Config": [
+      "config_export -description {Pixel Unpacking from 32-bit to 24-bit}",
+      "config_export -display_name {Pixel Unpack}",
+      "config_export -format=ip_catalog"
+    ]},
+  "Args": {
+    "stream_in_32": {
+      "index": "0",
+      "type": {
+        "kinds": [
+          "struct",
+          "pointer"
+        ],
+        "dataType": "wide_stream",
+        "structImpl": "flat-field",
+        "dataPack": true,
+        "fields": {
+          "data": {
+            "order": "0",
+            "dataType": "ap_uint",
+            "dataWidth": "32",
+            "interfaceRef": "stream_in_32",
+            "bitMap": "31:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "user": {
+            "order": "1",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "stream_in_32",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "last": {
+            "order": "2",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "stream_in_32",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          }
+        }
+      }
+    },
+    "stream_out_24": {
+      "index": "1",
+      "type": {
+        "kinds": [
+          "struct",
+          "pointer"
+        ],
+        "dataType": "narrow_stream",
+        "structImpl": "flat-field",
+        "dataPack": true,
+        "fields": {
+          "data": {
+            "order": "0",
+            "dataType": "ap_uint",
+            "dataWidth": "24",
+            "interfaceRef": "stream_out_24",
+            "bitMap": "23:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "user": {
+            "order": "1",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "stream_out_24",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "last": {
+            "order": "2",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "stream_out_24",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          }
+        }
+      }
+    },
+    "mode": {
+      "index": "2",
+      "type": {
+        "dataType": "int",
+        "dataWidth": "32",
+        "interfaceRef": "s_axi_AXILiteS",
+        "registerRefs": ["mode"]
+      }
+    }
+  },
+  "Return": {
+    
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "7",
+    "IsCombLogic": "0",
+    "II": "x",
+    "Latency": "undef",
+    "Uncertainty": "0.875"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 7.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "pixel_unpack",
+    "Version": "1.0",
+    "DisplayName": "Pixel Unpack",
+    "Revision": "",
+    "Description": "Pixel Unpacking from 32-bit to 24-bit",
+    "Taxonomy": "\/VIVADO_HLS_IP",
+    "AutoFamilySupport": ""
+  },
+  "Files": {
+    "CSource": ["..\/pixel_unpack.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/pixel_unpack_AXILiteS_s_axi.vhd",
+      "impl\/vhdl\/regslice_core.vhd",
+      "impl\/vhdl\/pixel_unpack.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/pixel_unpack_AXILiteS_s_axi.v",
+      "impl\/verilog\/regslice_core.v",
+      "impl\/verilog\/pixel_unpack.v"
+    ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/pixel_unpack_v1_0\/data\/pixel_unpack.mdd",
+      "impl\/misc\/drivers\/pixel_unpack_v1_0\/data\/pixel_unpack.tcl",
+      "impl\/misc\/drivers\/pixel_unpack_v1_0\/src\/Makefile",
+      "impl\/misc\/drivers\/pixel_unpack_v1_0\/src\/xpixel_unpack.c",
+      "impl\/misc\/drivers\/pixel_unpack_v1_0\/src\/xpixel_unpack.h",
+      "impl\/misc\/drivers\/pixel_unpack_v1_0\/src\/xpixel_unpack_hw.h",
+      "impl\/misc\/drivers\/pixel_unpack_v1_0\/src\/xpixel_unpack_linux.c",
+      "impl\/misc\/drivers\/pixel_unpack_v1_0\/src\/xpixel_unpack_sinit.c"
+    ],
+    "Misc": ["impl\/misc\/logo.png"],
+    "DesignXml": "C:\/Users\/mrigatti\/Desktop\/PYNQ\/GitHub\/PYNQ-2.6.0\/boards\/ip\/hls\/pixel_unpack\/solution1\/.autopilot\/db\/pixel_unpack.design.xml",
+    "DebugDir": "C:\/Users\/mrigatti\/Desktop\/PYNQ\/GitHub\/PYNQ-2.6.0\/boards\/ip\/hls\/pixel_unpack\/solution1\/.debug",
+    "ProtoInst": ["C:\/Users\/mrigatti\/Desktop\/PYNQ\/GitHub\/PYNQ-2.6.0\/boards\/ip\/hls\/pixel_unpack\/solution1\/.debug\/pixel_unpack.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "IP": []
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "bundle_name": "ap_clk",
+      "bundle_role": "default",
+      "buses": "stream_in_32 stream_out_24",
+      "reset": "ap_rst_n"
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "polarity": "ACTIVE_LOW",
+      "ctype": {"RST": {"Type": "bool"}},
+      "bundle_name": "ap_rst_n",
+      "bundle_role": "default"
+    },
+    "ap_rst_n_control": {
+      "type": "reset",
+      "ctype": {"RST": {"Type": "bool"}},
+      "bundle_name": "AXILiteS",
+      "bundle_role": "axilite_rst",
+      "polarity": "ACTIVE_LOW"
+    },
+    "control": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "bundle_name": "AXILiteS",
+      "bundle_role": "axilite_clk",
+      "buses": "s_axi_AXILiteS",
+      "reset": "ap_rst_n_control"
+    },
+    "s_axi_AXILiteS": {
+      "type": "axi4lite",
+      "is_adaptor": "true",
+      "mode": "slave",
+      "port_prefix": "s_axi_AXILiteS",
+      "param_prefix": "C_S_AXI_AXILITES",
+      "addr_bits": "5",
+      "registers": [{
+          "offset": "0x10",
+          "name": "mode",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of mode",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "mode",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of mode"
+            }]
+        }],
+      "ctype": {
+        "AWVALID": {"Type": "bool"},
+        "AWREADY": {"Type": "bool"},
+        "WVALID": {"Type": "bool"},
+        "WREADY": {"Type": "bool"},
+        "BVALID": {"Type": "bool"},
+        "BREADY": {"Type": "bool"},
+        "BRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARVALID": {"Type": "bool"},
+        "ARREADY": {"Type": "bool"},
+        "RVALID": {"Type": "bool"},
+        "RREADY": {"Type": "bool"},
+        "RRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWADDR": {
+          "Type": "integer unsigned",
+          "Width": "5"
+        },
+        "WDATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        },
+        "WSTRB": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARADDR": {
+          "Type": "integer unsigned",
+          "Width": "5"
+        },
+        "RDATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }
+      },
+      "data_width": "32",
+      "port_width": {
+        "ARADDR": "5",
+        "AWADDR": "5",
+        "RDATA": "32",
+        "WDATA": "32",
+        "WSTRB": "4"
+      }
+    },
+    "stream_in_32": {
+      "type": "axi4stream",
+      "mode": "slave",
+      "port_prefix": "stream_in_32",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"},
+        "TLAST": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "TUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        }
+      },
+      "port_width": {
+        "TDATA": "32",
+        "TLAST": "1",
+        "TUSER": "1"
+      }
+    },
+    "stream_out_24": {
+      "type": "axi4stream",
+      "mode": "master",
+      "port_prefix": "stream_out_24",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "integer unsigned",
+          "Width": "24"
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"},
+        "TLAST": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "TUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        }
+      },
+      "port_width": {
+        "TDATA": "24",
+        "TLAST": "1",
+        "TUSER": "1"
+      }
+    }
+  },
+  "RtlPorts": {
+    "s_axi_AXILiteS_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_AWADDR": {
+      "dir": "in",
+      "width": "5"
+    },
+    "s_axi_AXILiteS_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_AXILiteS_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_AXILiteS_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_ARADDR": {
+      "dir": "in",
+      "width": "5"
+    },
+    "s_axi_AXILiteS_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_AXILiteS_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_AXILiteS_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "control": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n_control": {
+      "dir": "in",
+      "width": "1"
+    },
+    "stream_in_32_TDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "stream_in_32_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "stream_in_32_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "stream_in_32_TLAST": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "stream_in_32_TUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "stream_out_24_TDATA": {
+      "dir": "out",
+      "width": "24"
+    },
+    "stream_out_24_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "stream_out_24_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "stream_out_24_TLAST": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "stream_out_24_TUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {"ModuleName": "pixel_unpack"},
+    "Info": {"pixel_unpack": {
+        "FunctionProtocol": "ap_ctrl_none",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }},
+    "Metrics": {"pixel_unpack": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "7.00",
+          "Uncertainty": "0.88",
+          "Estimate": "2.302"
+        },
+        "Loops": [
+          {
+            "Name": "Loop 1",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "4",
+            "PipelineDepth": "7"
+          },
+          {
+            "Name": "Loop 2",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          },
+          {
+            "Name": "Loop 3",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "4",
+            "PipelineDepth": "5"
+          },
+          {
+            "Name": "Loop 4",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "2",
+            "PipelineDepth": "3"
+          },
+          {
+            "Name": "Loop 5",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "2",
+            "PipelineDepth": "3"
+          }
+        ],
+        "Area": {
+          "BRAM_18K": "0",
+          "FF": "250",
+          "LUT": "434",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      }}
+  },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "XO": "",
+    "KernelName": "pixel_unpack",
+    "EnableXoSwEmu": "1"
+  },
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2022-06-30 11:13:11 -0500",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2020.1"
+  }
+}

@@ -1,0 +1,223 @@
+
+
+================================================================
+== Vivado HLS Report for 'pixel_unpack'
+================================================================
+* Date:           Thu Jun 30 11:13:09 2022
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        pixel_unpack
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 7.00 ns | 2.302 ns |   0.88 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |        ?|        ?|         7|          4|          4|     ?|    yes   |
+        |- Loop 2  |        ?|        ?|         2|          1|          1|     ?|    yes   |
+        |- Loop 3  |        ?|        ?|         5|          4|          4|     ?|    yes   |
+        |- Loop 4  |        ?|        ?|         3|          2|          2|     ?|    yes   |
+        |- Loop 5  |        ?|        ?|         3|          2|          2|     ?|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     48|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        0|      -|      68|    104|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    282|    -|
+|Register         |        -|      -|     182|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     250|    434|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------+-----------------------------+---------+-------+----+-----+-----+
+    |            Instance           |            Module           | BRAM_18K| DSP48E| FF | LUT | URAM|
+    +-------------------------------+-----------------------------+---------+-------+----+-----+-----+
+    |pixel_unpack_AXILiteS_s_axi_U  |pixel_unpack_AXILiteS_s_axi  |        0|      0|  68|  104|    0|
+    +-------------------------------+-----------------------------+---------+-------+----+-----+-----+
+    |Total                          |                             |        0|      0|  68|  104|    0|
+    +-------------------------------+-----------------------------+---------+-------+----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |ap_block_pp0_stage0_01001  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage1_11001  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp1_stage0_01001  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp1_stage1_11001  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp2_stage0_01001  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp2_stage1_11001  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp3_stage0_01001  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp4_stage0_01001  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp4_stage3_11001  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001  |    or    |      0|  0|   2|           1|           1|
+    |ap_block_pp1_stage0_11001  |    or    |      0|  0|   2|           1|           1|
+    |ap_block_pp2_stage0_11001  |    or    |      0|  0|   2|           1|           1|
+    |ap_block_pp3_stage0_11001  |    or    |      0|  0|   2|           1|           1|
+    |ap_block_pp4_stage0_11001  |    or    |      0|  0|   2|           1|           1|
+    |ap_block_pp4_stage2_11001  |    or    |      0|  0|   2|           1|           1|
+    |or_ln46_1_fu_313_p2        |    or    |      0|  0|   2|           1|           1|
+    |or_ln46_fu_307_p2          |    or    |      0|  0|   2|           1|           1|
+    |or_ln718_1_fu_300_p2       |    or    |      0|  0|   2|           1|           1|
+    |or_ln718_fu_294_p2         |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0              |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_pp1              |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_pp2              |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_pp3              |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_pp4              |    xor   |      0|  0|   2|           1|           2|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |Total                      |          |      0|  0|  48|          24|          29|
+    +---------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------+-----+-----------+-----+-----------+
+    |            Name           | LUT | Input Size| Bits| Total Bits|
+    +---------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                  |  101|         21|    1|         21|
+    |ap_enable_reg_pp0_iter1    |    9|          2|    1|          2|
+    |ap_enable_reg_pp1_iter1    |    9|          2|    1|          2|
+    |ap_enable_reg_pp2_iter1    |    9|          2|    1|          2|
+    |ap_enable_reg_pp3_iter1    |    9|          2|    1|          2|
+    |ap_enable_reg_pp4_iter1    |    9|          2|    1|          2|
+    |stream_in_32_TDATA_blk_n   |    9|          2|    1|          2|
+    |stream_out_24_TDATA_blk_n  |    9|          2|    1|          2|
+    |stream_out_24_TDATA_int    |   59|         14|   24|        336|
+    |stream_out_24_TLAST_int    |   38|          7|    1|          7|
+    |stream_out_24_TUSER_int    |   21|          4|    1|          4|
+    +---------------------------+-----+-----------+-----+-----------+
+    |Total                      |  282|         60|   34|        382|
+    +---------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |  20|   0|   20|          0|
+    |ap_enable_reg_pp0_iter0  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |ap_enable_reg_pp1_iter0  |   1|   0|    1|          0|
+    |ap_enable_reg_pp1_iter1  |   1|   0|    1|          0|
+    |ap_enable_reg_pp2_iter0  |   1|   0|    1|          0|
+    |ap_enable_reg_pp2_iter1  |   1|   0|    1|          0|
+    |ap_enable_reg_pp3_iter0  |   1|   0|    1|          0|
+    |ap_enable_reg_pp3_iter1  |   1|   0|    1|          0|
+    |ap_enable_reg_pp4_iter0  |   1|   0|    1|          0|
+    |ap_enable_reg_pp4_iter1  |   1|   0|    1|          0|
+    |empty_4_reg_449_1        |   1|   0|    1|          0|
+    |empty_4_reg_449_2        |   1|   0|    1|          0|
+    |empty_reg_438_1          |   1|   0|    1|          0|
+    |empty_reg_438_2          |   1|   0|    1|          0|
+    |last_1_reg_378           |   1|   0|    1|          0|
+    |last_2_reg_358           |   1|   0|    1|          0|
+    |last_reg_398             |   1|   0|    1|          0|
+    |mode_0_data_reg          |  32|   0|   32|          0|
+    |mode_0_vld_reg           |   0|   0|    1|          1|
+    |or_ln46_1_reg_465        |   1|   0|    1|          0|
+    |p_Result_3_3_reg_475     |  24|   0|   24|          0|
+    |reg_183                  |   8|   0|    8|          0|
+    |reg_187                  |   8|   0|    8|          0|
+    |reg_191                  |   8|   0|    8|          0|
+    |reg_195                  |  16|   0|   16|          0|
+    |trunc_ln647_1_reg_455    |  16|   0|   16|          0|
+    |trunc_ln647_2_reg_470    |   8|   0|    8|          0|
+    |trunc_ln647_reg_444      |  24|   0|   24|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    | 182|   0|  183|          1|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+--------------+----------------------+--------------+
+|        RTL Ports       | Dir | Bits|   Protocol   |     Source Object    |    C Type    |
++------------------------+-----+-----+--------------+----------------------+--------------+
+|s_axi_AXILiteS_AWVALID  |  in |    1|     s_axi    |       AXILiteS       |    scalar    |
+|s_axi_AXILiteS_AWREADY  | out |    1|     s_axi    |       AXILiteS       |    scalar    |
+|s_axi_AXILiteS_AWADDR   |  in |    5|     s_axi    |       AXILiteS       |    scalar    |
+|s_axi_AXILiteS_WVALID   |  in |    1|     s_axi    |       AXILiteS       |    scalar    |
+|s_axi_AXILiteS_WREADY   | out |    1|     s_axi    |       AXILiteS       |    scalar    |
+|s_axi_AXILiteS_WDATA    |  in |   32|     s_axi    |       AXILiteS       |    scalar    |
+|s_axi_AXILiteS_WSTRB    |  in |    4|     s_axi    |       AXILiteS       |    scalar    |
+|s_axi_AXILiteS_ARVALID  |  in |    1|     s_axi    |       AXILiteS       |    scalar    |
+|s_axi_AXILiteS_ARREADY  | out |    1|     s_axi    |       AXILiteS       |    scalar    |
+|s_axi_AXILiteS_ARADDR   |  in |    5|     s_axi    |       AXILiteS       |    scalar    |
+|s_axi_AXILiteS_RVALID   | out |    1|     s_axi    |       AXILiteS       |    scalar    |
+|s_axi_AXILiteS_RREADY   |  in |    1|     s_axi    |       AXILiteS       |    scalar    |
+|s_axi_AXILiteS_RDATA    | out |   32|     s_axi    |       AXILiteS       |    scalar    |
+|s_axi_AXILiteS_RRESP    | out |    2|     s_axi    |       AXILiteS       |    scalar    |
+|s_axi_AXILiteS_BVALID   | out |    1|     s_axi    |       AXILiteS       |    scalar    |
+|s_axi_AXILiteS_BREADY   |  in |    1|     s_axi    |       AXILiteS       |    scalar    |
+|s_axi_AXILiteS_BRESP    | out |    2|     s_axi    |       AXILiteS       |    scalar    |
+|ap_clk                  |  in |    1| ap_ctrl_none |     pixel_unpack     | return value |
+|ap_rst_n                |  in |    1| ap_ctrl_none |     pixel_unpack     | return value |
+|control                 |  in |    1| ap_ctrl_none |     pixel_unpack     | return value |
+|ap_rst_n_control        |  in |    1| ap_ctrl_none |     pixel_unpack     | return value |
+|stream_in_32_TDATA      |  in |   32|     axis     |  stream_in_32_data_V |    pointer   |
+|stream_in_32_TVALID     |  in |    1|     axis     |  stream_in_32_last_V |    pointer   |
+|stream_in_32_TREADY     | out |    1|     axis     |  stream_in_32_last_V |    pointer   |
+|stream_in_32_TLAST      |  in |    1|     axis     |  stream_in_32_last_V |    pointer   |
+|stream_in_32_TUSER      |  in |    1|     axis     |  stream_in_32_user_V |    pointer   |
+|stream_out_24_TDATA     | out |   24|     axis     | stream_out_24_data_V |    pointer   |
+|stream_out_24_TVALID    | out |    1|     axis     | stream_out_24_last_V |    pointer   |
+|stream_out_24_TREADY    |  in |    1|     axis     | stream_out_24_last_V |    pointer   |
+|stream_out_24_TLAST     | out |    1|     axis     | stream_out_24_last_V |    pointer   |
+|stream_out_24_TUSER     | out |    1|     axis     | stream_out_24_user_V |    pointer   |
++------------------------+-----+-----+--------------+----------------------+--------------+
+
