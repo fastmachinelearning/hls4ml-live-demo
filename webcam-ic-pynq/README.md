@@ -49,4 +49,4 @@ Open Vivado 2019.2 and in the TCL console navigate to the camera_demo_overlay fo
     source camera_demo.tcl
   # To implement and generate the bitstream
     source implement_camera_demo.tcl
-  # The .bit and .hwh files are in the folder camera_demo_overlay/outpu
+  # The .bit and .hwh files are in the folder camera_demo_overlay/output
