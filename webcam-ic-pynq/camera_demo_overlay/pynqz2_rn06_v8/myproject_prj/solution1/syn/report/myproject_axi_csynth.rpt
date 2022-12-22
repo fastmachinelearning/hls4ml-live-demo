@@ -1,0 +1,211 @@
+
+
+================================================================
+== Vivado HLS Report for 'myproject_axi'
+================================================================
+* Date:           Tue Aug  9 17:19:12 2022
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.621 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+--------+----------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval    | Pipeline |
+    |   min   |   max   |    min   |    max   |  min  |   max  |   Type   |
+    +---------+---------+----------+----------+-------+--------+----------+
+    |   944610|   944610| 9.446 ms | 9.446 ms |  41032|  922001| dataflow |
+    +---------+---------+----------+----------+-------+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------+---------------------------------+---------+---------+----------+----------+-------+--------+----------+
+        |                                    |                                 |  Latency (cycles) |  Latency (absolute) |    Interval    | Pipeline |
+        |              Instance              |              Module             |   min   |   max   |    min   |    max   |  min  |   max  |   Type   |
+        +------------------------------------+---------------------------------+---------+---------+----------+----------+-------+--------+----------+
+        |myproject_U0                        |myproject                        |   944609|   944609| 9.446 ms | 9.446 ms |  41032|  922001| dataflow |
+        |Loop_1_proc225_U0                   |Loop_1_proc225                   |    14337|    14337| 0.143 ms | 0.143 ms |  14337|   14337|   none   |
+        |Loop_2_proc_U0                      |Loop_2_proc                      |       61|       61| 0.610 us | 0.610 us |     61|      61|   none   |
+        |Block_myproject_axi_exit52_proc_U0  |Block_myproject_axi_exit52_proc  |        0|        0|   0 ns   |   0 ns   |      0|       0|   none   |
+        +------------------------------------+---------------------------------+---------+---------+----------+----------+-------+--------+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     44|    -|
+|FIFO             |        6|      -|     301|    887|    -|
+|Instance         |      163|      0|   37866|  29712|    0|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|     90|    -|
+|Register         |        -|      -|      10|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |      169|      0|   38177|  30733|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |       60|      0|      35|     57|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------+---------------------------------+---------+-------+-------+-------+-----+
+    |              Instance              |              Module             | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
+    +------------------------------------+---------------------------------+---------+-------+-------+-------+-----+
+    |Block_myproject_axi_exit52_proc_U0  |Block_myproject_axi_exit52_proc  |        0|      0|     82|    193|    0|
+    |Loop_1_proc225_U0                   |Loop_1_proc225                   |        0|      0|    298|   1208|    0|
+    |Loop_2_proc_U0                      |Loop_2_proc                      |        0|      0|    213|    967|    0|
+    |myproject_U0                        |myproject                        |      163|      0|  37273|  27344|    0|
+    +------------------------------------+---------------------------------+---------+-------+-------+-------+-----+
+    |Total                               |                                 |      163|      0|  37866|  29712|    0|
+    +------------------------------------+---------------------------------+---------+-------+-------+-------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +---------------------------+---------+----+----+-----+------+-----+---------+
+    |            Name           | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +---------------------------+---------+----+----+-----+------+-----+---------+
+    |in_local_V_data_0_V_U      |        2|  62|   0|    -|  3072|    8|    24576|
+    |in_local_V_data_1_V_U      |        2|  62|   0|    -|  3072|    8|    24576|
+    |in_local_V_data_2_V_U      |        2|  62|   0|    -|  3072|    8|    24576|
+    |is_last_0_i_loc_channel_U  |        0|   5|   0|    -|     2|    1|        2|
+    |out_local_V_data_0_V_U     |        0|   6|   0|    -|    10|    8|       80|
+    |out_local_V_data_1_V_U     |        0|   6|   0|    -|    10|    8|       80|
+    |out_local_V_data_2_V_U     |        0|   6|   0|    -|    10|    8|       80|
+    |out_local_V_data_3_V_U     |        0|   6|   0|    -|    10|    8|       80|
+    |out_local_V_data_4_V_U     |        0|   6|   0|    -|    10|    8|       80|
+    |out_local_V_data_5_V_U     |        0|   6|   0|    -|    10|    8|       80|
+    |out_local_V_data_6_V_U     |        0|   6|   0|    -|    10|    8|       80|
+    |out_local_V_data_7_V_U     |        0|   6|   0|    -|    10|    8|       80|
+    |out_local_V_data_8_V_U     |        0|   6|   0|    -|    10|    8|       80|
+    |out_local_V_data_9_V_U     |        0|   6|   0|    -|    10|    8|       80|
+    |tmp_data_V_0_U             |        0|   5|   0|    -|     2|    8|       16|
+    |tmp_data_V_1_U             |        0|   5|   0|    -|     2|    8|       16|
+    |tmp_data_V_2_U             |        0|   5|   0|    -|     2|    8|       16|
+    |tmp_data_V_3_U             |        0|   5|   0|    -|     2|    8|       16|
+    |tmp_data_V_4_U             |        0|   5|   0|    -|     2|    8|       16|
+    |tmp_data_V_5_U             |        0|   5|   0|    -|     2|    8|       16|
+    |tmp_data_V_6_U             |        0|   5|   0|    -|     2|    8|       16|
+    |tmp_data_V_7_U             |        0|   5|   0|    -|     2|    8|       16|
+    |tmp_data_V_8_U             |        0|   5|   0|    -|     2|    8|       16|
+    |tmp_data_V_9_U             |        0|   5|   0|    -|     2|    8|       16|
+    +---------------------------+---------+----+----+-----+------+-----+---------+
+    |Total                      |        6| 301|   0|    0|  9338|  185|    74690|
+    +---------------------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +------------------------------------------------+----------+-------+---+----+------------+------------+
+    |                  Variable Name                 | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------------+----------+-------+---+----+------------+------------+
+    |Block_myproject_axi_exit52_proc_U0_ap_continue  |    and   |      0|  0|   2|           1|           1|
+    |Loop_2_proc_U0_ap_start                         |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_tmp_data_V_0                    |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_tmp_data_V_1                    |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_tmp_data_V_2                    |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_tmp_data_V_3                    |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_tmp_data_V_4                    |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_tmp_data_V_5                    |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_tmp_data_V_6                    |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_tmp_data_V_7                    |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_tmp_data_V_8                    |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_tmp_data_V_9                    |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp_data_V_0              |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp_data_V_1              |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp_data_V_2              |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp_data_V_3              |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp_data_V_4              |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp_data_V_5              |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp_data_V_6              |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp_data_V_7              |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp_data_V_8              |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp_data_V_9              |    or    |      0|  0|   2|           1|           1|
+    +------------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                           |          |      0|  0|  44|          22|          22|
+    +------------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+----+-----------+-----+-----------+
+    |                  Name                  | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_tmp_data_V_0  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp_data_V_1  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp_data_V_2  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp_data_V_3  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp_data_V_4  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp_data_V_5  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp_data_V_6  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp_data_V_7  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp_data_V_8  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp_data_V_9  |   9|          2|    1|          2|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |Total                                   |  90|         20|   10|         20|
+    +----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------+---+----+-----+-----------+
+    |                  Name                  | FF| LUT| Bits| Const Bits|
+    +----------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_tmp_data_V_0  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp_data_V_1  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp_data_V_2  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp_data_V_3  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp_data_V_4  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp_data_V_5  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp_data_V_6  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp_data_V_7  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp_data_V_8  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp_data_V_9  |  1|   0|    1|          0|
+    +----------------------------------------+---+----+-----+-----------+
+    |Total                                   | 10|   0|   10|          0|
+    +----------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------+-----+-----+--------------+---------------+--------------+
+|   RTL Ports  | Dir | Bits|   Protocol   | Source Object |    C Type    |
++--------------+-----+-----+--------------+---------------+--------------+
+|in_r_TDATA    |  in |   32|     axis     |    in_data    |    pointer   |
+|in_r_TVALID   |  in |    1|     axis     |    in_data    |    pointer   |
+|in_r_TREADY   | out |    1|     axis     |    in_data    |    pointer   |
+|in_r_TLAST    |  in |    1|     axis     |   in_last_V   |    pointer   |
+|out_r_TDATA   | out |   32|     axis     |    out_data   |    pointer   |
+|out_r_TLAST   | out |    1|     axis     |   out_last_V  |    pointer   |
+|out_r_TVALID  | out |    1|     axis     |   out_last_V  |    pointer   |
+|out_r_TREADY  |  in |    1|     axis     |   out_last_V  |    pointer   |
+|ap_clk        |  in |    1| ap_ctrl_none | myproject_axi | return value |
+|ap_rst_n      |  in |    1| ap_ctrl_none | myproject_axi | return value |
++--------------+-----+-----+--------------+---------------+--------------+
+
