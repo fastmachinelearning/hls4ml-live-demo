@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2.1 (64-bit)
+# SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
+# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+# Start of session at: Tue Aug  9 17:20:43 2022
+# Process ID: 39069
+# Current directory: /data1/jcampos/tinyml_demo/submissions_tiny_0.7/open/hls4ml-finn/code/ic/RN07/inference/pynq-z2/pynqz2_rn06_v8/myproject_vivado_accelerator/project_1.runs/design_1_processing_system7_0_0_synth_1
+# Command line: vivado -log design_1_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_processing_system7_0_0.tcl
+# Log file: /data1/jcampos/tinyml_demo/submissions_tiny_0.7/open/hls4ml-finn/code/ic/RN07/inference/pynq-z2/pynqz2_rn06_v8/myproject_vivado_accelerator/project_1.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.vds
+# Journal file: /data1/jcampos/tinyml_demo/submissions_tiny_0.7/open/hls4ml-finn/code/ic/RN07/inference/pynq-z2/pynqz2_rn06_v8/myproject_vivado_accelerator/project_1.runs/design_1_processing_system7_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_processing_system7_0_0.tcl -notrace
