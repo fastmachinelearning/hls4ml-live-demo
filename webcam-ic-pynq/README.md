@@ -42,12 +42,11 @@ To generate the Overlay in Vivado and the .bit and .hwh files, the project has b
 
 Open Vivado 2019.2 and in the TCL console navigate to the camera_demo_overlay folder.
 
-  ````` 
+![image](https://user-images.githubusercontent.com/103663080/209133861-73fe7291-1b13-4355-98b1-a35cef93cf82.png)
+
+  ```
   # To build the project:
     source camera_demo.tcl
   # To implement and generate the bitstream
     source implement_camera_demo.tcl
-  # The .bit and .hwh files are in the folder camera_demo_overlay/output
-  
-  ![image](https://user-images.githubusercontent.com/103663080/209133861-73fe7291-1b13-4355-98b1-a35cef93cf82.png)
-
+  # The .bit and .hwh files are in the folder camera_demo_overlay/outpu
