@@ -1,0 +1,126 @@
+save_dir: /data1/jcampos/tinyml_demo
+
+model:
+  name: resnet_v1_eembc_quantized
+  filters:
+  - 32
+  - 32
+  l1: 0
+  l2: 1e-4
+  kernels:
+  - 3
+  - 3
+  - 3
+  strides:
+  - '411'
+  skip: 0
+  avg_pooling: 0
+
+pruning:
+  sparsity: 1.0
+
+fit:
+  compile:
+    initial_lr: 0.001
+    lr_decay: 0.99
+    optimizer: Adam
+    loss: categorical_crossentropy
+  epochs: 200
+  patience: 40
+  batch_size: 32
+  verbose: 1
+
+quantization:
+  logit_total_bits: 8
+  logit_int_bits: 2
+  logit_quantizer: quantized_bits
+  activation_total_bits: 8
+  activation_int_bits: 2
+  activation_quantizer: quantized_relu
+  alpha: 1
+  use_stochastic_rounding: 0
+
+convert:
+  ProjectName: resnet
+  RemoveSoftmax: 1
+  OutputDir: pynqz2_rn06_v8
+  XilinxPart: xc7z020clg400-1
+  ApplyPatches: 0
+  AxiWidth: 8
+  Interface: axi_stream
+  Driver: python
+  InputType: float
+  OutputType: float
+  Implementation: serial
+  Board: pynq-z2
+  Backend: VivadoAccelerator
+  IOType: io_stream
+  Precision: ap_fixed<8,6>
+  ReuseFactor: 16384
+  Trace: 0
+  Build: 1
+  EEMBC_power: 0
+  FIFO_opt: 0
+  FIFO_opt_json: None
+  MergedRelu: 1
+  ClockPeriod: 10
+  Strategy: Resource
+  Override:
+    input_1:
+      Precision: ap_ufixed<8,0>
+    q_conv2d_batchnorm:
+      force_dsp: 0
+      accum_t: ap_fixed<14,6>
+      Precision:
+        weight: ap_fixed<8,3>
+        bias: ap_fixed<8,3>
+        result: ap_fixed<9,6>
+        default: ap_fixed<9,6>
+    q_conv2d_batchnorm_linear:
+      Precision:
+        result: ap_fixed<9,6>
+        default: ap_fixed<9,6>
+    q_activation:
+      Precision:
+        default: ap_fixed<9,6>
+        result: ap_fixed<8,3,AP_RND,AP_SAT>
+    q_conv2d_batchnorm_1:
+      force_dsp: 0
+      accum_t: ap_fixed<14,6>
+      Precision:
+        weight: ap_fixed<8,3>
+        bias: ap_fixed<8,3>
+        result: ap_fixed<9,6>
+        default: ap_fixed<9,6>
+    q_conv2d_batchnorm_1_linear:
+      Precision:
+        result: ap_fixed<8,6>
+        default: ap_fixed<8,6>
+    q_activation_1:
+      Precision:
+        default: ap_fixed<9,6>
+        result: ap_fixed<8,3,AP_RND,AP_SAT>
+    q_conv2d_batchnorm_2:
+      force_dsp: 0
+      accum_t: ap_fixed<14,6>
+      Precision:
+        weight: ap_fixed<8,3>
+        bias: ap_fixed<8,3>
+        result: ap_fixed<9,6>
+        default: ap_fixed<9,6>
+    q_conv2d_batchnorm_2_linear:
+      Precision:
+        result: ap_fixed<9,6>
+        default: ap_fixed<9,6>
+    q_activation_2:
+      Precision:
+        default: ap_fixed<9,6>
+        result: ap_fixed<8,3,AP_RND,AP_SAT>
+    q_dense:
+      force_dsp: 0
+      accum_t: ap_fixed<12,6>
+      Precision:
+        weight: ap_fixed<8,3>
+        bias: ap_fixed<8,3>
+        result: ap_fixed<8,6>
+        default: ap_fixed<8,6>
