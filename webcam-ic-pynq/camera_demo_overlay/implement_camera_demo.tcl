@@ -1,3 +1,5 @@
+open_project camera_demo/camera_demo.xpr 
+
 set IMPL_RUN [get_runs impl*]
 set SYNTH_RUN [get_runs synth*]
 
@@ -32,4 +34,4 @@ set origin_dir "."
 exec mkdir $origin_dir/output
 #launch_runs impl_1 -to_step write_bitstream -jobs 16
 write_bitstream -force $origin_dir/output/camera_demo.bit
-file rename -force $origin_dir/camera_demo.srcs/sources_1/bd/HDMI/hw_handoff/HDMI.hwh $origin_dir/output/
+file rename -force $origin_dir/camera_demo/camera_demo.srcs/sources_1/bd/HDMI/hw_handoff/HDMI.hwh $origin_dir/output/

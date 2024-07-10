@@ -40,7 +40,7 @@ From a top level perspective, the image processing pipeline involves sending dat
 The .bit and .hwh files are already in the folder Overlay.
 To generate the Overlay in Vivado and the .bit and .hwh files, the project has been provided with the TCL files to generate it. 
 
-Open Vivado 2019.2 and in the TCL console navigate to the camera_demo_overlay folder.
+Open Vivado 2020.1 and in the TCL console navigate to the camera_demo_overlay folder.
 
 ![image](https://user-images.githubusercontent.com/103663080/209133861-73fe7291-1b13-4355-98b1-a35cef93cf82.png)
 
