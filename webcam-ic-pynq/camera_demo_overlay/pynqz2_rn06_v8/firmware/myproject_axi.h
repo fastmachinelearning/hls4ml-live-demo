@@ -33,8 +33,5 @@ typedef struct out_struct {
     out_struct(double data) {this->data = data; this->last = 0;}
 } output_axi_t;
 
-void myproject_axi(
-    input_axi_t in[N_IN],
-    output_axi_t out[N_OUT]
-        );
+void myproject_axi(input_axi_t in[N_IN], output_axi_t out[N_OUT]);
 #endif

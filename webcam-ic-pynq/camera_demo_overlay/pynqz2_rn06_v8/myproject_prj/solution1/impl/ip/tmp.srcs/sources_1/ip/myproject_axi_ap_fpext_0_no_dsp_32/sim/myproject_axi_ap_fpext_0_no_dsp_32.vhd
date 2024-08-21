@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2024 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:floating_point:7.1
--- IP Revision: 9
+-- IP Revision: 10
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY floating_point_v7_1_9;
-USE floating_point_v7_1_9.floating_point_v7_1_9;
+LIBRARY floating_point_v7_1_10;
+USE floating_point_v7_1_10.floating_point_v7_1_10;
 
 ENTITY myproject_axi_ap_fpext_0_no_dsp_32 IS
   PORT (
@@ -68,7 +68,7 @@ END myproject_axi_ap_fpext_0_no_dsp_32;
 ARCHITECTURE myproject_axi_ap_fpext_0_no_dsp_32_arch OF myproject_axi_ap_fpext_0_no_dsp_32 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF myproject_axi_ap_fpext_0_no_dsp_32_arch: ARCHITECTURE IS "yes";
-  COMPONENT floating_point_v7_1_9 IS
+  COMPONENT floating_point_v7_1_10 IS
     GENERIC (
       C_XDEVICEFAMILY : STRING;
       C_PART : STRING;
@@ -178,7 +178,7 @@ ARCHITECTURE myproject_axi_ap_fpext_0_no_dsp_32_arch OF myproject_axi_ap_fpext_0
       m_axis_result_tuser : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
       m_axis_result_tlast : OUT STD_LOGIC
     );
-  END COMPONENT floating_point_v7_1_9;
+  END COMPONENT floating_point_v7_1_10;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF m_axis_result_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_RESULT TDATA";
@@ -188,7 +188,7 @@ ARCHITECTURE myproject_axi_ap_fpext_0_no_dsp_32_arch OF myproject_axi_ap_fpext_0
   ATTRIBUTE X_INTERFACE_PARAMETER OF s_axis_a_tvalid: SIGNAL IS "XIL_INTERFACENAME S_AXIS_A, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_a_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_A TVALID";
 BEGIN
-  U0 : floating_point_v7_1_9
+  U0 : floating_point_v7_1_10
     GENERIC MAP (
       C_XDEVICEFAMILY => "zynq",
       C_PART => "xc7z020clg400-1",

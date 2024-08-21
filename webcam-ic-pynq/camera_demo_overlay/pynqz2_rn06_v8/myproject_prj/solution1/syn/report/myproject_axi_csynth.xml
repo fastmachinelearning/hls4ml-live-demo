@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2019.2.1</Version>
+<Version>2020.1</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -21,29 +21,29 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>944610</Best-caseLatency>
-<Average-caseLatency>944610</Average-caseLatency>
-<Worst-caseLatency>944610</Worst-caseLatency>
-<Best-caseRealTimeLatency>9.446 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>9.446 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>9.446 ms</Worst-caseRealTimeLatency>
+<Best-caseLatency>979913</Best-caseLatency>
+<Average-caseLatency>979913</Average-caseLatency>
+<Worst-caseLatency>979913</Worst-caseLatency>
+<Best-caseRealTimeLatency>9.799 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>9.799 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>9.799 ms</Worst-caseRealTimeLatency>
 <DataflowPipelineThroughput>
 <range>
 <min>41032</min>
-<max>922001</max>
+<max>958001</max>
 </range>
 </DataflowPipelineThroughput>
 <Interval-min>41032</Interval-min>
-<Interval-max>922001</Interval-max>
+<Interval-max>958001</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>169</BRAM_18K>
+<BRAM_18K>264</BRAM_18K>
 <DSP48E>0</DSP48E>
-<FF>38177</FF>
-<LUT>30733</LUT>
+<FF>45715</FF>
+<LUT>46429</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

@@ -1,6 +1,6 @@
 # ==============================================================
-# Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2.1 (64-bit)
-# Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+# Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+# Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 # ==============================================================
 source -notrace [file join [file dirname [get_property XML_FILE_NAME [get_ipdefs -all -quiet xilinx.com:ip:xbip_utils:3.0]]] "common_tcl/common.tcl"]
 common_tcl::gen_procs xilinx.com:hls:myproject_axi:1.0

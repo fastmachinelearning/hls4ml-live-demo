@@ -1,0 +1,136 @@
+
+
+================================================================
+== Vivado HLS Report for 'Block_myproject_axi_exit50_proc'
+================================================================
+* Date:           Thu Jul 11 17:07:42 2024
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 3.634 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|   0 ns   |   0 ns   |    0|    0|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.63>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i14* %out_local_V_data_9_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 2 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i14* %out_local_V_data_8_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 3 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i14* %out_local_V_data_7_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 4 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i14* %out_local_V_data_6_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 5 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i14* %out_local_V_data_5_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i14* %out_local_V_data_4_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 7 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i14* %out_local_V_data_3_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i14* %out_local_V_data_2_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 9 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i14* %out_local_V_data_1_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 10 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i14* %out_local_V_data_0_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 11 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (3.63ns)   --->   "%empty = call { i14, i14, i14, i14, i14, i14, i14, i14, i14, i14 } @_ssdm_op_Read.ap_fifo.volatile.i14P.i14P.i14P.i14P.i14P.i14P.i14P.i14P.i14P.i14P(i14* %out_local_V_data_0_V, i14* %out_local_V_data_1_V, i14* %out_local_V_data_2_V, i14* %out_local_V_data_3_V, i14* %out_local_V_data_4_V, i14* %out_local_V_data_5_V, i14* %out_local_V_data_6_V, i14* %out_local_V_data_7_V, i14* %out_local_V_data_8_V, i14* %out_local_V_data_9_V)" [firmware/myproject_axi.cpp:30]   --->   Operation 12 'read' 'empty' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 14> <Depth = 1> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%out_local_V_data_0_V_val = extractvalue { i14, i14, i14, i14, i14, i14, i14, i14, i14, i14 } %empty, 0" [firmware/myproject_axi.cpp:30]   --->   Operation 13 'extractvalue' 'out_local_V_data_0_V_val' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%out_local_V_data_1_V_val = extractvalue { i14, i14, i14, i14, i14, i14, i14, i14, i14, i14 } %empty, 1" [firmware/myproject_axi.cpp:30]   --->   Operation 14 'extractvalue' 'out_local_V_data_1_V_val' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%out_local_V_data_2_V_val = extractvalue { i14, i14, i14, i14, i14, i14, i14, i14, i14, i14 } %empty, 2" [firmware/myproject_axi.cpp:30]   --->   Operation 15 'extractvalue' 'out_local_V_data_2_V_val' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%out_local_V_data_3_V_val = extractvalue { i14, i14, i14, i14, i14, i14, i14, i14, i14, i14 } %empty, 3" [firmware/myproject_axi.cpp:30]   --->   Operation 16 'extractvalue' 'out_local_V_data_3_V_val' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%out_local_V_data_4_V_val = extractvalue { i14, i14, i14, i14, i14, i14, i14, i14, i14, i14 } %empty, 4" [firmware/myproject_axi.cpp:30]   --->   Operation 17 'extractvalue' 'out_local_V_data_4_V_val' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%out_local_V_data_5_V_val = extractvalue { i14, i14, i14, i14, i14, i14, i14, i14, i14, i14 } %empty, 5" [firmware/myproject_axi.cpp:30]   --->   Operation 18 'extractvalue' 'out_local_V_data_5_V_val' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%out_local_V_data_6_V_val = extractvalue { i14, i14, i14, i14, i14, i14, i14, i14, i14, i14 } %empty, 6" [firmware/myproject_axi.cpp:30]   --->   Operation 19 'extractvalue' 'out_local_V_data_6_V_val' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%out_local_V_data_7_V_val = extractvalue { i14, i14, i14, i14, i14, i14, i14, i14, i14, i14 } %empty, 7" [firmware/myproject_axi.cpp:30]   --->   Operation 20 'extractvalue' 'out_local_V_data_7_V_val' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%out_local_V_data_8_V_val = extractvalue { i14, i14, i14, i14, i14, i14, i14, i14, i14, i14 } %empty, 8" [firmware/myproject_axi.cpp:30]   --->   Operation 21 'extractvalue' 'out_local_V_data_8_V_val' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%out_local_V_data_9_V_val = extractvalue { i14, i14, i14, i14, i14, i14, i14, i14, i14, i14 } %empty, 9" [firmware/myproject_axi.cpp:30]   --->   Operation 22 'extractvalue' 'out_local_V_data_9_V_val' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "store i14 %out_local_V_data_0_V_val, i14* %tmp_data_V_0, align 2" [firmware/myproject_axi.cpp:30]   --->   Operation 23 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "store i14 %out_local_V_data_1_V_val, i14* %tmp_data_V_1, align 2" [firmware/myproject_axi.cpp:30]   --->   Operation 24 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "store i14 %out_local_V_data_2_V_val, i14* %tmp_data_V_2, align 2" [firmware/myproject_axi.cpp:30]   --->   Operation 25 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "store i14 %out_local_V_data_3_V_val, i14* %tmp_data_V_3, align 2" [firmware/myproject_axi.cpp:30]   --->   Operation 26 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "store i14 %out_local_V_data_4_V_val, i14* %tmp_data_V_4, align 2" [firmware/myproject_axi.cpp:30]   --->   Operation 27 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "store i14 %out_local_V_data_5_V_val, i14* %tmp_data_V_5, align 2" [firmware/myproject_axi.cpp:30]   --->   Operation 28 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "store i14 %out_local_V_data_6_V_val, i14* %tmp_data_V_6, align 2" [firmware/myproject_axi.cpp:30]   --->   Operation 29 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "store i14 %out_local_V_data_7_V_val, i14* %tmp_data_V_7, align 2" [firmware/myproject_axi.cpp:30]   --->   Operation 30 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "store i14 %out_local_V_data_8_V_val, i14* %tmp_data_V_8, align 2" [firmware/myproject_axi.cpp:30]   --->   Operation 31 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "store i14 %out_local_V_data_9_V_val, i14* %tmp_data_V_9, align 2" [firmware/myproject_axi.cpp:30]   --->   Operation 32 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 33 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 3.63ns
+The critical path consists of the following:
+	fifo read on port 'out_local_V_data_0_V' (firmware/myproject_axi.cpp:30) [31]  (3.63 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

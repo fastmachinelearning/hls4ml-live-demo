@@ -1,0 +1,4 @@
+#!/bin/sh
+lli=${LLVMINTERP-lli}
+exec $lli \
+    /data/jcampos/projects/pokemon/inference/2020.1/pynqz2_resnet_m_axi_8_serial_05302024_aug_LBW_prj/myproject_prj/solution1/.autopilot/db/a.g.bc ${1+"$@"}

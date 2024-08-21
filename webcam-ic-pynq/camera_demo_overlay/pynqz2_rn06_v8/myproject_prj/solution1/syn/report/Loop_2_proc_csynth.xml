@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2019.2.1</Version>
+<Version>2020.1</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -21,28 +21,28 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>61</Best-caseLatency>
-<Average-caseLatency>61</Average-caseLatency>
-<Worst-caseLatency>61</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.610 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.610 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.610 us</Worst-caseRealTimeLatency>
-<Interval-min>61</Interval-min>
-<Interval-max>61</Interval-max>
+<Best-caseLatency>51</Best-caseLatency>
+<Average-caseLatency>51</Average-caseLatency>
+<Worst-caseLatency>51</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.510 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.510 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.510 us</Worst-caseRealTimeLatency>
+<Interval-min>51</Interval-min>
+<Interval-max>51</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <Loop1>
 <TripCount>10</TripCount>
-<Latency>60</Latency>
-<IterationLatency>6</IterationLatency>
+<Latency>50</Latency>
+<IterationLatency>5</IterationLatency>
 </Loop1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<FF>213</FF>
-<LUT>967</LUT>
+<FF>210</FF>
+<LUT>1000</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>0</DSP48E>
 <URAM>0</URAM>
@@ -197,7 +197,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>14</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -208,7 +208,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>14</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -219,7 +219,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>14</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -230,7 +230,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>14</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -241,7 +241,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>14</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -252,7 +252,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>14</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -263,7 +263,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>14</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -274,7 +274,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>14</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -285,7 +285,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>14</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -296,7 +296,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>14</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 </InterfaceSummary>

@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2019.2.1 (64-bit)
-# SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
-# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
-# Start of session at: Tue Aug  9 17:19:31 2022
-# Process ID: 37258
-# Current directory: /data1/jcampos/tinyml_demo/submissions_tiny_0.7/open/hls4ml-finn/code/ic/RN07/inference/pynq-z2/pynqz2_rn06_v8/myproject_prj/solution1/impl/ip
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Jul 11 17:09:55 2024
+# Process ID: 24525
+# Current directory: /data/jcampos/projects/pokemon/inference/2020.1/pynqz2_resnet_m_axi_8_serial_05302024_aug_LBW_prj/myproject_prj/solution1/impl/ip
 # Command line: vivado -notrace -mode batch -source run_ippack.tcl
-# Log file: /data1/jcampos/tinyml_demo/submissions_tiny_0.7/open/hls4ml-finn/code/ic/RN07/inference/pynq-z2/pynqz2_rn06_v8/myproject_prj/solution1/impl/ip/vivado.log
-# Journal file: /data1/jcampos/tinyml_demo/submissions_tiny_0.7/open/hls4ml-finn/code/ic/RN07/inference/pynq-z2/pynqz2_rn06_v8/myproject_prj/solution1/impl/ip/vivado.jou
+# Log file: /data/jcampos/projects/pokemon/inference/2020.1/pynqz2_resnet_m_axi_8_serial_05302024_aug_LBW_prj/myproject_prj/solution1/impl/ip/vivado.log
+# Journal file: /data/jcampos/projects/pokemon/inference/2020.1/pynqz2_resnet_m_axi_8_serial_05302024_aug_LBW_prj/myproject_prj/solution1/impl/ip/vivado.jou
 #-----------------------------------------------------------
 source run_ippack.tcl -notrace
