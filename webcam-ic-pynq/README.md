@@ -46,7 +46,7 @@ Open Vivado 2020.1 and in the TCL console navigate to the camera_demo_overlay fo
 
   ```
   # To build the project:
-    source camera_demo.tcl
+    vivado -mode batch -source camera_demo.tcl
   # To implement and generate the bitstream
-    source implement_camera_demo.tcl
+    vivado -mode batch -source implement_camera_demo.tcl 
   # The .bit and .hwh files are in the folder camera_demo_overlay/output

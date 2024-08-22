@@ -31,7 +31,12 @@ current_run $IMPL_RUN
 set CREATE_CHECKPOINT 0
 
 set origin_dir "."
-exec mkdir $origin_dir/output
+# Check if the directory exists
+if {![file exists $origin_dir/output]} {
+    file mkdir $origin_dir/output
+    puts "Directory created: $origin_dir/output"
+}
+#exec mkdir $origin_dir/output
 #launch_runs impl_1 -to_step write_bitstream -jobs 16
 write_bitstream -force $origin_dir/output/camera_demo.bit
 file rename -force $origin_dir/camera_demo/camera_demo.srcs/sources_1/bd/HDMI/hw_handoff/HDMI.hwh $origin_dir/output/
