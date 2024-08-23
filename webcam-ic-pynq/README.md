@@ -19,6 +19,9 @@ For the project the following parts are required:
 - Ethernet cable
 
 
+## Training the model
+This can be found in another repository here at [this repo](https://github.com/fastmachinelearning/RN0X_Pokemon/tree/hls4ml-summer-school-2024)
+
 ## Getting Started with the PYNQ Z2
 This project use the USB input and the HDMI output of the PYNQ Z2 board; the IP of the Neural Network is generated with the hls4ml and it is implemented modifying the PYNQ Overlay. The base overlay contains a HDMI output controller and Petalinux provides the USB Device Driver (https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18842272/Zynq+Linux+USB+Device+Driver).  
 
